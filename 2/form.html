@@ -10,9 +10,9 @@
 </head>
   <body>
     <header class="main-header">
-      <a class="main-header__logo">
-        <img class="brand-icon" src="#" alt="Кот победитель в плаще на фоне солнца." width="70" height="59">
-        <img class="brand-name" src="#" alt="Текстовая версия логотипа cat energy." width="118" height="21">
+      <a class="main-header__logo"  href="index.html">
+        <img class="logo--icon" src="#" alt="Кот победитель в плаще на фоне солнца." width="70" height="59">
+        <img class="logo--text" src="#" alt="Текстовая версия логотипа cat energy." width="118" height="21">
       </a>
       <nav class="main-header__navigation">
         <ul class="main-header__list">
@@ -29,21 +29,21 @@
       </nav>
     </header>
     <main>
-      <section class="pet">
-        <h1 class="pet__title">Подбор программы</h1>
-        <p class="pet__gist">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-        <form class="pet__form" action="https://echo.htmlacademy.ru/" method="post">
+      <section class="filter">
+        <h1 class="filter__title">Подбор программы</h1>
+        <p class="filter__gist">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <form class="filter__form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset>
             <legend class="visually-hidden">Основные характеристики кота</legend>
-            <label class="pet__characteristic">
+            <label class="filter__characteristic">
               <span>Имя:*</span>
               <input type="text" name="cat's name" placeholder="Барсик" required>
             </label>
-            <label class="pet__characteristic">
+            <label class="filter__characteristic">
               <span>Вес (кг):*</span>
               <input type="text" name="cat's weight" placeholder="7" required>
             </label>
-            <label class="pet__characteristic">
+            <label class="filter__characteristic">
               <span>Возраст (лет):</span>
               <input type="text" name="cat's age" placeholder="7">
             </label>
@@ -52,19 +52,19 @@
             <legend class="visually-hidden">Тип изменения веса</legend>
             <ul>
               <li>
-                <label class="pet__radio">
+                <label class="filter__radio">
                   <input type="radio" name="weight loss" value="weight loss" checked>
                   <span>Похудение</span>
                 </label>
               </li>
               <li>
-                <label class="pet__radio">
+                <label class="filter__radio">
                   <input type="radio" name="weight gain" value="weight gain">
                   <span>Набор массы</span>
                 </label>
               </li>
               <li>
-                <label class="pet__radio">
+                <label class="filter__radio">
                   <input type="radio" name="advice" value="advice">
                   <span>Не знаю (Нужен ваш совет)</span>
                 </label>
@@ -72,7 +72,7 @@
             </ul>
           </fieldset>
           <fieldset>
-            <legend class="pet__subtitle">Контактные данные (владельца кота)</legend>
+            <legend class="filter__subtitle">Контактные данные (владельца кота)</legend>
             <label >
               <span>E-mail:*</span>
               <input  type="text" name="e-mail" placeholder="кuklachev@gmail.com" maxlength="100" required>
@@ -83,32 +83,34 @@
             </label>
           </fieldset>
           <fieldset>
-            <legend class="pet__subtitle">Комментарий</legend>
-            <textarea name="comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <legend class="filter__subtitle">Комментарий</legend>
+            <label>
+              <textarea name="comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </label>
           </fieldset>
           <fieldset>
-            <legend class="pet__subtitle">Дополнительно</legend>
+            <legend class="filter__subtitle">Дополнительно</legend>
             <ul>
               <li>
-                <label class="pet__checkbox">
+                <label class="filter__checkbox">
                   <input type="checkbox" name="sweetener" checked>
                   <span>Сахарозаменитель</span>
                 </label>
               </li>
               <li>
-                <label class="pet__checkbox">
+                <label class="filter__checkbox">
                   <input type="checkbox" name="drinking water">
                   <span>Питьевая вода</span>
                 </label>
               </li>
               <li>
-                <label class="pet__checkbox">
+                <label class="filter__checkbox">
                   <input type="checkbox" name="milk">
                   <span>Молоко</span>
                 </label>
               </li>
               <li>
-                <label class="pet__checkbox">
+                <label class="filter__checkbox">
                   <input type="checkbox" name="vitamins">
                   <span>Витамины</span>
                 </label>
@@ -122,25 +124,28 @@
     </main>
     <footer>
       <div>Map</div>
-      <div class="social">
-        <img class="brand-name" src="#" width="128" height="24" alt="Текстовая версия логотипа cat energy.">
-        <ul class="social__list">
-          <li>
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Вконтакте</span>
-            </a>
-          </li>
-          <li>
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Ютуб</span>
-            </a>
-          </li>
-          <li>
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Телеграм</span>
-            </a>
-          </li>
-        </ul>
+      <div class="footer-container">
+        <img class="logo--text" src="#" width="128" height="24" alt="Текстовая версия логотипа cat energy.">
+        <section class="social">
+          <h2 class="visually-hidden">Соцсети</h2>
+          <ul class="social__list">
+            <li>
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+            <li>
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">Ютуб</span>
+              </a>
+            </li>
+            <li>
+              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+                <span class="visually-hidden">Телеграм</span>
+              </a>
+            </li>
+          </ul>
+        </section>
         <a class="academy-logo" href="https://htmlacademy.ru/">
           <span class="visually-hidden">Переход на сайт htmlacademy.ru</span>
         </a>

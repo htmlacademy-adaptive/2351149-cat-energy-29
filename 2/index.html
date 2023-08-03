@@ -10,9 +10,9 @@
 </head>
   <body>
     <header class="main-header">
-      <a class="main-header__logo">
-        <img class="brand-icon" src="#" alt="Кот победитель в плаще на фоне солнца." width="70" height="59">
-        <img class="brand-name" src="#" alt="Текстовая версия логотипа cat energy." width="118" height="21">
+      <a class="logo" href="#">
+        <img class="logo--icon" src="#" alt="Кот победитель в плаще на фоне солнца." width="70" height="59">
+        <img class="logo--text" src="#" alt="Текстовая версия логотипа cat energy." width="118" height="21">
       </a>
       <nav class="main-header__navigation">
         <ul class="main-header__list">
@@ -33,7 +33,7 @@
         <h1 class="hero__title">Функциональное питание для котов</h1>
         <p class="hero__text">Занялся собой? Займись котом!</p>
         <a class="hero__link button" href="#">Подобрать программу</a>
-        <img class="hero__cat-food" src="#" alt="Cat Energy PRO со вкусом курицы." width="552px" height="499px">
+        <img class="hero__cat-food" src="#" alt="Cat Energy PRO со вкусом курицы." width="552" height="499">
       </section>
       <section class="diet">
         <h2 class="visually-hidden">Изменение веса</h2>
@@ -41,12 +41,12 @@
           <li class="diet__item">
             <h3 class="diet__title">Похудение</h3>
             <p class="diet__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="diet__link" href="#">Каталог slim</a>
+            <a class="diet__link" href="#">Каталог Slim</a>
           </li>
           <li class="diet__item">
             <h3 class="diet__title">Набор массы</h3>
             <p class="diet__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="diet__link" href="#">Каталог pro</a>
+            <a class="diet__link" href="#">Каталог Pro</a>
           </li>
         </ul>
       </section>
@@ -65,18 +65,16 @@
           <p class="outcome__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <div class="outcome__wrapper">
             <dl class="outcome__item">
-              <dd class="outcome__number">5 кг</dd>
               <dt class="outcome__desc">Снижение веса</dt>
-            </dl>
-            <dl class="outcome__item">
-              <dd class="outcome__number">60 дней</dd>
+              <dd class="outcome__number">5 кг</dd>
               <dt class="outcome__desc">Затраченное время</dt>
+              <dd class="outcome__number">60 дней</dd>
             </dl>
           </div>
         </div>
         <div class="outcome__container-compare">
-          <img class="outcome__right-image" src="#" width="560" height="512" alt="Толстая кошка.">
-          <img class="outcome__left-image" src="#" width="560" height="512" alt="Худая кошка.">
+          <img class="outcome__image-before" src="#" width="560" height="512" alt="Толстая кошка.">
+          <img class="outcome__image-after" src="#" width="560" height="512" alt="Худая кошка.">
           <button class="outcome__slider" type="button">
             <span class="visually-hidden">Ползунок сравнения картинок</span>
           </button>
@@ -85,25 +83,28 @@
     </main>
     <footer>
       <div>Map</div>
-      <div class="social">
-        <img class="brand-name" src="#" width="128" height="24" alt="Текстовая версия логотипа cat energy.">
-        <ul class="social__list">
-          <li>
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Вконтакте</span>
-            </a>
-          </li>
-          <li>
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Ютуб</span>
-            </a>
-          </li>
-          <li>
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Телеграм</span>
-            </a>
-          </li>
-        </ul>
+      <div class="footer-container">
+        <img class="logo--text" src="#" width="128" height="24" alt="Текстовая версия логотипа cat energy.">
+        <section class="social">
+          <h2 class="visually-hidden">Соцсети</h2>
+          <ul class="social__list">
+            <li>
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+            <li>
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">Ютуб</span>
+              </a>
+            </li>
+            <li>
+              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+                <span class="visually-hidden">Телеграм</span>
+              </a>
+            </li>
+          </ul>
+        </section>
         <a class="academy-logo" href="https://htmlacademy.ru/">
           <span class="visually-hidden">Переход на сайт htmlacademy.ru</span>
         </a>
