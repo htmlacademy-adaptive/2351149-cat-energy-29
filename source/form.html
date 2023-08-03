@@ -28,21 +28,21 @@
       </nav>
     </header>
     <main>
-      <section>
-        <h2>Подбор программы</h2>
-        <p>Заполните анкету, и мы подберем программу питания для вашего кота</p>
-        <form action="https://echo.htmlacademy.ru/" method="post">
+      <section class="pet">
+        <h1 class="pet__title">Подбор программы</h1>
+        <p class="pet__gist">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <form class="pet__form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset>
             <legend class="visually-hidden">Основные характеристики кота</legend>
-            <label>
+            <label class="pet__characteristic">
               <span>Имя:*</span>
               <input type="text" name="cat's name" placeholder="Барсик" required>
             </label>
-            <label>
+            <label class="pet__characteristic">
               <span>Вес (кг):*</span>
               <input type="text" name="cat's weight" placeholder="7" required>
             </label>
-            <label>
+            <label class="pet__characteristic">
               <span>Возраст (лет):</span>
               <input type="text" name="cat's age" placeholder="7">
             </label>
@@ -51,19 +51,19 @@
             <legend class="visually-hidden">Тип изменения веса</legend>
             <ul>
               <li>
-                <label>
+                <label class="pet__radio">
                   <input type="radio" name="weight loss" value="weight loss" checked>
                   <span>Похудение</span>
                 </label>
               </li>
               <li>
-                <label>
+                <label class="pet__radio">
                   <input type="radio" name="weight gain" value="weight gain">
                   <span>Набор массы</span>
                 </label>
               </li>
               <li>
-                <label>
+                <label class="pet__radio">
                   <input type="radio" name="advice" value="advice">
                   <span>Не знаю (Нужен ваш совет)</span>
                 </label>
@@ -71,8 +71,8 @@
             </ul>
           </fieldset>
           <fieldset>
-            <legend>Контактные данные (владельца кота)</legend>
-            <label>
+            <legend class="pet__subtitle">Контактные данные (владельца кота)</legend>
+            <label >
               <span>E-mail:*</span>
               <input  type="text" name="e-mail" placeholder="кuklachev@gmail.com" maxlength="100" required>
             </label>
@@ -82,32 +82,32 @@
             </label>
           </fieldset>
           <fieldset>
-            <legend>Комментарий</legend>
-            <input type="text" placeholder="Расскажите обо всех повадках кота">
+            <legend class="pet__subtitle">Комментарий</legend>
+            <textarea name="comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset>
-            <legend>Дополнительно</legend>
+            <legend class="pet__subtitle">Дополнительно</legend>
             <ul>
               <li>
-                <label>
+                <label class="pet__checkbox">
                   <input type="checkbox" name="sweetener" checked>
                   <span>Сахарозаменитель</span>
                 </label>
               </li>
               <li>
-                <label>
+                <label class="pet__checkbox">
                   <input type="checkbox" name="drinking water">
                   <span>Питьевая вода</span>
                 </label>
               </li>
               <li>
-                <label>
+                <label class="pet__checkbox">
                   <input type="checkbox" name="milk">
                   <span>Молоко</span>
                 </label>
               </li>
               <li>
-                <label>
+                <label class="pet__checkbox">
                   <input type="checkbox" name="vitamins">
                   <span>Витамины</span>
                 </label>
