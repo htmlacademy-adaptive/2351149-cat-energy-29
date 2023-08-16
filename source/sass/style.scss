@@ -1,5 +1,8 @@
+@use "common/fonts";
 @use "common/global";
 
+
+@use "blocks/text";
 @use "blocks/button";
 @use "blocks/card";
 @use "blocks/card-narrow";
@@ -14,6 +17,4 @@
 @use "blocks/outcome";
 @use "blocks/page";
 @use "blocks/social";
-@use "blocks/subtitle";
-@use "blocks/title";
 @use "blocks/visually-hidden";

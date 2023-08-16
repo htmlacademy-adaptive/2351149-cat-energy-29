@@ -5,11 +5,10 @@
 }
 
 .diet__text {
-  // @include mixins.font("Lato", Lato-Regular, 400, normal);
-  font-size: 16px;
   line-height: 24px;
 }
 
 .diet__link {
   color: #000000;
+  text-transform: uppercase;
 }

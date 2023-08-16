@@ -1,0 +1,41 @@
+@use "common/mixins";
+
+.filter__gist {
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filter__fieldset {
+  border: none;
+}
+
+.filter__characteristic--text {
+  text-transform: uppercase;
+}
+
+.filter__list--radio {
+  @include mixins.reset-list;
+}
+
+.filte__contacts--email,
+.filte__contacts--phone {
+  text-transform: uppercase;
+}
+
+.filter__list--checkbox {
+  @include mixins.reset-list;
+}
+
+.filter__radio--text {
+  text-transform: uppercase;
+}
+
+.filter__textarea {
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filter__checkbox--text {
+  text-transform: uppercase;
+}
