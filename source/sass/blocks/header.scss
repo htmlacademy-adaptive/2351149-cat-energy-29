@@ -1,0 +1,14 @@
+@use "common/mixins";
+
+.header {
+  background-color: red;
+}
+
+.header__list {
+  @include mixins.reset-list;
+}
+
+.header__link {
+  color: #ffffff;
+  text-transform: uppercase;
+}

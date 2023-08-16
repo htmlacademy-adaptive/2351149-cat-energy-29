@@ -1,0 +1,21 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-style: #{$style};
+    font-weight: #{$weight};
+    src: url("../../fonts/#{to-lower-case($font_name)}/#{$file_name}.woff2") format("woff2"),
+      url("../../fonts/#{to-lower-case($font_name)}/#{$file_name}.woff") format("woff");
+    font-display: swap;
+  }
+}
+
+// @include mixins.font("Lato", Lato-Regular, 400, normal);
+// @include mixins.font("Oswald", oswaldregular, 400, normal);
+
+
