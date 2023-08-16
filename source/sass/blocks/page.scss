@@ -1,11 +1,14 @@
-@use "common/mixins";
+@use "common/fonts";
 
 .page {
   height: 100%;
-  @include mixins.font("Oswald", oswaldregular, 400, normal);
+  // @include fonts.font("Oswald", oswaldregular, 400, normal);
 }
 
 .page__body {
+  // font-family: "Oswald";
+  // font-style: normal;
+  // font-weight: 400;
   font-size: 20px;
   line-height: 20px;
   background-color: #ffffff;

@@ -1,0 +1,31 @@
+// @font-face {
+//   font-family: "Oswald";
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url("../../fonts/oswald/oswaldregular.woff2") format("woff2"),
+//         url("../../fonts/oswald/oswaldregular.woff") format("woff");
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: "Lato";
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url("../../fonts/lato/Lato-Regular.woff2") format("woff2"),
+//         url("../../fonts/lato/Lato-Regular.woff") format("woff");
+//   font-display: swap;
+// }
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-style: #{$style};
+    font-weight: #{$weight};
+    src: url("../../fonts/#{to-lower-case($font_name)}/#{$file_name}.woff2") format("woff2"),
+      url("../../fonts/#{to-lower-case($font_name)}/#{$file_name}.woff") format("woff");
+    font-display: swap;
+  }
+}
+
+@include font("Lato", Lato-Regular, 400, normal);
+@include font("Oswald", oswaldregular, 400, normal);
