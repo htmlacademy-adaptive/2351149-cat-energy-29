@@ -1,0 +1,11 @@
+@use "common/mixins";
+
+.details__list {
+  @include mixins.reset-list;
+}
+
+.details__item {
+  line-height: 24px;
+  // counter-reset
+  // counter-increment
+}

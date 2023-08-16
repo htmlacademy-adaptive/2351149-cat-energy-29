@@ -1,0 +1,14 @@
+@use "common/mixins";
+
+.diet__list {
+  @include mixins.reset-list;
+}
+
+.diet__text {
+  line-height: 24px;
+}
+
+.diet__link {
+  color: #000000;
+  text-transform: uppercase;
+}

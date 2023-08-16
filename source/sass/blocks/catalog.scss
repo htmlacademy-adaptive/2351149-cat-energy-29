@@ -1,0 +1,5 @@
+@use "common/mixins";
+
+.catalog__list {
+  @include mixins.reset-list;
+}
