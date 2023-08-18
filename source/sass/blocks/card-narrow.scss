@@ -1,18 +1,38 @@
 @use "common/variables" as *;
 
 .card-narrow__subtitle {
-  color: var(--color-rarest);
+  font-size: 16px;
+  line-height: 16px;
   font-weight: 400;
-  line-height: 20px;
+  color: var(--color-rarest);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .card-narrow__property {
   font-family: $minor;
+  font-size: 14px;
+  line-height: 14px;
   color: var(--color-casual);
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .card-narrow__price {
   font-family: $minor;
+  font-size: 14px;
+  line-height: 14px;
   color: var(--color-casual);
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

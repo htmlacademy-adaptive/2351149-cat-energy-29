@@ -8,9 +8,17 @@
 .header__list {
   @include reset-list;
   display: none;
+
+  @media (min-width: $tablet) {
+    display: flex;
+  }
 }
 
 .header__link {
-  color: var(--color-rare);
-  text-transform: uppercase;
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--color-common);
+    text-transform: uppercase;
+  }
 }

@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body text">
+  <body class="page__body">
     <div class="page__container">
       <header class="header">
         <a class="header__logo"  href="index.html">
@@ -31,21 +31,21 @@
       </header>
       <main>
         <section class="filter">
-          <h1 class="filter__title text__gargantuan">Подбор программы</h1>
-          <p class="filter__gist text__tiny">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          <h1 class="filter__title">Подбор программы</h1>
+          <p class="filter__gist">Заполните анкету, и мы подберем программу питания для вашего кота</p>
           <form class="filter__form" action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="filter__fieldset">
               <legend class="visually-hidden">Основные характеристики кота</legend>
               <label class="filter__characteristic">
-                <span class="filter__characteristic--text text__small">Имя:*</span>
+                <span class="filter__characteristic--text">Имя:*</span>
                 <input class="filter__characteristic--input" type="text" name="cat's name" placeholder="Барсик" required>
               </label>
               <label class="filter__characteristic">
-                <span class="filter__characteristic--text text__small">Вес (кг):*</span>
+                <span class="filter__characteristic--text">Вес (кг):*</span>
                 <input type="text" name="cat's weight" placeholder="7" required>
               </label>
               <label class="filter__characteristic">
-                <span class="filter__characteristic--text text__small">Возраст (лет):</span>
+                <span class="filter__characteristic--text">Возраст (лет):</span>
                 <input type="text" name="cat's age" placeholder="7">
               </label>
             </fieldset>
@@ -55,78 +55,78 @@
                 <li>
                   <label class="filter__radio">
                     <input type="radio" name="weight-change" value="weight loss" checked>
-                    <span class="filter__radio--text text__small">Похудение</span>
+                    <span class="filter__radio--text">Похудение</span>
                   </label>
                 </li>
                 <li>
                   <label class="filter__radio">
                     <input type="radio" name="weight-change" value="weight gain">
-                    <span class="filter__radio--text text__small">Набор массы</span>
+                    <span class="filter__radio--text">Набор массы</span>
                   </label>
                 </li>
                 <li>
                   <label class="filter__radio">
                     <input type="radio" name="weight-change" value="advice">
-                    <span class="filter__radio--text text__small">Не знаю (Нужен ваш совет)</span>
+                    <span class="filter__radio--text">Не знаю (Нужен ваш совет)</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="filter__fieldset">
-              <legend class="filter__subtitle text__large">Контактные данные (владельца кота)</legend>
+              <legend class="filter__subtitle">Контактные данные (владельца кота)</legend>
               <label class="filter__contacts">
-                <span class="filter__contacts--email text__small">E-mail:*</span>
+                <span class="filter__contacts--email">E-mail:*</span>
                 <input class="filter__contacts--input" type="text" name="e-mail" placeholder="кuklachev@gmail.com" maxlength="100" required>
               </label>
               <label>
-                <span class="filter__contacts--phone text__small">Телефон:*</span>
+                <span class="filter__contacts--phone">Телефон:*</span>
                 <input class="filter__contacts--input" type="number" name="phone" placeholder="8 (960) 900-60-90" required>
               </label>
             </fieldset>
             <fieldset class="filter__fieldset">
-              <legend class="filter__subtitle text__large">Комментарий</legend>
+              <legend class="filter__subtitle">Комментарий</legend>
               <label>
                 <textarea class="filter__textarea" name="comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
               </label>
             </fieldset>
             <fieldset class="filter__fieldset">
-              <legend class="filter__subtitle text__large">Дополнительно</legend>
+              <legend class="filter__subtitle">Дополнительно</legend>
               <ul class="filter__list--checkbox">
                 <li>
                   <label class="filter__checkbox">
                     <input type="checkbox" name="sweetener" checked>
-                    <span class="filter__checkbox--text text__small">Сахарозаменитель</span>
+                    <span class="filter__checkbox--text">Сахарозаменитель</span>
                   </label>
                 </li>
                 <li>
                   <label class="filter__checkbox">
                     <input type="checkbox" name="drinking water">
-                    <span class="filter__checkbox--text text__small">Питьевая вода</span>
+                    <span class="filter__checkbox--text">Питьевая вода</span>
                   </label>
                 </li>
                 <li>
                   <label class="filter__checkbox">
                     <input type="checkbox" name="milk">
-                    <span class="filter__checkbox--text text__small">Молоко</span>
+                    <span class="filter__checkbox--text">Молоко</span>
                   </label>
                 </li>
                 <li>
                   <label class="filter__checkbox">
                     <input type="checkbox" name="vitamins">
-                    <span class="filter__checkbox--text text__small">Витамины</span>
+                    <span class="filter__checkbox--text">Витамины</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
-            <button class="button button__form text__small" type="submit">Отправить заявку</button>
-            <p class="filter__requirment text__tiny">* — Обязательные поля</p>
+            <button class="button button__form" type="submit">Отправить заявку</button>
+            <p class="filter__requirment">* — Обязательные поля</p>
           </form>
         </section>
       </main>
       <footer>
-        <div class="banner">
-          <span class="banner__slogan text__small">Приглашаем к сотрудничеству дилеров!</span>
-          <address class="banner__address text__tiny">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="banner banner--dark">
+          <span class="banner__slogan">Приглашаем к сотрудничеству дилеров!</span>
+          <address class="banner__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
         <div>Map</div>
         <div class="footer-container">

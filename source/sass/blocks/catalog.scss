@@ -1,10 +1,45 @@
 @use "common/mixins" as *;
 @use "common/variables" as *;
 
-// .catalog__title {
+.catalog__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
 
-// }
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.catalog__title--extra {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
 
 .catalog__list {
   @include reset-list;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.catalog__list--extra {
+  @include reset-list;
+}
+
+.catalog__promotion--extra {
+  font-family: $minor;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-main);
+  background-color: var(--bg-bright);
 }

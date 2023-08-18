@@ -7,17 +7,46 @@
   background-size: auto 302px;
   // #64A83D
   // #62A63B
+
+  @media (min-width: $tablet) {
+    background: none;
+  }
 }
 
 .hero__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
   color: var(--color-main);
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+    color: var(--color-common);
+  }
 }
 
 .hero__text {
+  font-size: 14px;
+  line-height: 14px;
   color: var(--color-main);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--color-common);
+  }
 }
 
 .hero__link {
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-main);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }

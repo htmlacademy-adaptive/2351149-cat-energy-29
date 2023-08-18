@@ -7,6 +7,10 @@
 .page__container {
   width: $mobile;
   margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: $tablet;
+  }
 }
 
 .page__body {

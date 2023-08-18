@@ -2,13 +2,11 @@
 @use "common/global";
 @use "common/root";
 
-@use "blocks/text";
 @use "blocks/button";
 @use "blocks/page";
 @use "blocks/card";
 @use "blocks/card-narrow";
 @use "blocks/catalog";
-@use "blocks/catalog-extra";
 @use "blocks/details";
 @use "blocks/diet";
 @use "blocks/filter";
@@ -18,4 +16,3 @@
 @use "blocks/outcome";
 @use "blocks/social";
 @use "blocks/banner";
-@use "blocks/visually-hidden";

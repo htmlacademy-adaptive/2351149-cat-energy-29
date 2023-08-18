@@ -1,9 +1,26 @@
 @use "common/mixins" as *;
 @use "common/variables" as *;
 
+.filter__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
 .filter__gist {
+  font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .filter__fieldset {
@@ -13,67 +30,130 @@
 }
 
 .filter__characteristic--text {
-  color: var(--color-casual);
+  font-size: 16px;
   line-height: 18px;
+  color: var(--color-casual);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: normal;
+  }
 }
 
 .filter__characteristic--input {
-  color: var(--color-casual);
+  font-size: 16px;
   line-height: 18px;
+  color: var(--color-casual);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: normal;
+  }
 }
 
 .filter__list--radio {
   @include reset-list;
 }
 
+.filter__radio--text {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--color-casual);
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+.filter__subtitle {
+  font-size: 24px;
+  line-height: 26px;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
 .filter__contacts--email,
 .filter__contacts--phone {
-  color: var(--color-casual);
+  font-size: 16px;
   line-height: 18px;
+  color: var(--color-casual);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: normal;
+  }
 }
 
 .filter__contacts--input {
-  color: var(--color-casual);
+  font-size: 16px;
   line-height: 18px;
+  color: var(--color-casual);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: normal;
+  }
 }
 
 .filter__textarea {
-  color: var(--color-casual);
+  font-size: 16px;
   line-height: 18px;
+  color: var(--color-casual);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .filter__list--checkbox {
   @include reset-list;
-}
 
-.filter__radio--text {
-  color: var(--color-casual);
-  line-height: 18px;
-  text-transform: uppercase;
-}
-
-.filter__subtitle {
-  line-height: 26px;
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .filter__textarea {
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .filter__checkbox--text {
-  color: var(--color-casual);
+  font-size: 16px;
   line-height: 18px;
+  color: var(--color-casual);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: normal;
+  }
 }
 
 .filter__requirment {
   font-family: $minor;
+  font-size: 14px;
   line-height: 16px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+  }
 }

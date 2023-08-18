@@ -1,26 +1,50 @@
 @use "common/variables" as *;
 
 .card__title {
-  color: var(--color-rarest);
-  font-weight: 400;
+  font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
+  color: var(--color-rarest);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .card__property {
   font-family: $minor;
-  color: var(--color-casual);
+  font-size: 12px;
   line-height: 16px;
+  color: var(--color-casual);
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .card__value {
   font-family: $minor;
-  color: var(--color-casual);
+  font-size: 12px;
   line-height: 16px;
+  color: var(--color-casual);
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .card__edition {
   font-family: $minor;
-  color: var(--color-casual);
+  font-size: 12px;
   line-height: 16px;
+  color: var(--color-casual);
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
