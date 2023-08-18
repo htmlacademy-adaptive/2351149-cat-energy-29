@@ -1,7 +1,26 @@
 @use "common/variables" as *;
 
 .card__title {
-  font-size: 20px;
+  color: var(--color-rarest);
   font-weight: 400;
-  line-height: 24px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.card__property {
+  font-family: $minor;
+  color: var(--color-casual);
+  line-height: 16px;
+}
+
+.card__value {
+  font-family: $minor;
+  color: var(--color-casual);
+  line-height: 16px;
+}
+
+.card__edition {
+  font-family: $minor;
+  color: var(--color-casual);
+  line-height: 16px;
 }

@@ -22,11 +22,11 @@
 }
 
 .button__catalog--dim {
+  color: var(--color-casual);
   background-color: var(--bg-dark);
 }
 
 .button__form {
-  font-size: 20px;
+  line-height: 20px;
   text-transform: uppercase;
-  width: 570px;
 }

@@ -4,17 +4,17 @@
   --black-light: #111111;
   --black-lightest: #222222;
   --green: #68B738;
-  --grey: #eaeaea;
-  --grey-dark: #f2f2f2;
   --grey-special: #444444;
+  --grey-dark: #f2f2f2;
+  --grey-darkest: #eaeaea;
 
   --color-main: var(--white);
   --color-common: var(--black);
   --color-casual: var(--grey-special);
   --color-rare: var(--black-light);
-  --color-rarest: var();
+  --color-rarest: var(--black-lightest);
   --bg-lightest: var(--white);
   --bg-bright: var(--green);
   --bg-dark: var(--grey-dark);
-  --bg-darkest: var(--grey);
+  --bg-darkest: var(--grey-darkest);
 }

@@ -3,12 +3,11 @@
 
 .header {
   display: flex;
-  background-color: var(--color-bg);
 }
 
 .header__list {
   @include reset-list;
-  // display: none;
+  display: none;
 }
 
 .header__link {

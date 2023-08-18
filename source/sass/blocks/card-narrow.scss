@@ -1,8 +1,18 @@
 @use "common/variables" as *;
 
 .card-narrow__subtitle {
-  font-size: 20px;
+  color: var(--color-rarest);
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+.card-narrow__property {
+  font-family: $minor;
+  color: var(--color-casual);
+}
+
+.card-narrow__price {
+  font-family: $minor;
+  color: var(--color-casual);
 }

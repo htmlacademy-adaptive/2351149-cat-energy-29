@@ -2,15 +2,25 @@
 @use "common/variables" as *;
 
 .filter__gist {
-  line-height: 30px;
+  line-height: 18px;
   text-transform: uppercase;
 }
 
 .filter__fieldset {
+  display: flex;
+  flex-direction: column;
   border: none;
 }
 
 .filter__characteristic--text {
+  color: var(--color-casual);
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.filter__characteristic--input {
+  color: var(--color-casual);
+  line-height: 18px;
   text-transform: uppercase;
 }
 
@@ -18,8 +28,22 @@
   @include reset-list;
 }
 
-.filte__contacts--email,
-.filte__contacts--phone {
+.filter__contacts--email,
+.filter__contacts--phone {
+  color: var(--color-casual);
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.filter__contacts--input {
+  color: var(--color-casual);
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.filter__textarea {
+  color: var(--color-casual);
+  line-height: 18px;
   text-transform: uppercase;
 }
 
@@ -28,7 +52,13 @@
 }
 
 .filter__radio--text {
+  color: var(--color-casual);
+  line-height: 18px;
   text-transform: uppercase;
+}
+
+.filter__subtitle {
+  line-height: 26px;
 }
 
 .filter__textarea {
@@ -38,5 +68,12 @@
 }
 
 .filter__checkbox--text {
+  color: var(--color-casual);
+  line-height: 18px;
   text-transform: uppercase;
+}
+
+.filter__requirment {
+  font-family: $minor;
+  line-height: 16px;
 }
