@@ -1,0 +1,16 @@
+@use "common/variables" as *;
+
+.banner {
+  display: flex;
+}
+
+.banner__slogan {
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.banner__address {
+  font-style: normal;
+  line-height: 20px;
+}
+

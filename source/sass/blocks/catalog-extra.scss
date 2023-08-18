@@ -1,5 +1,6 @@
-@use "common/mixins";
+@use "common/mixins" as *;
+@use "common/variables" as *;
 
 .catalog-extra__list {
-  @include mixins.reset-list;
+  @include reset-list;
 }

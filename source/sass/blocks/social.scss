@@ -1,7 +1,8 @@
-@use "common/mixins";
+@use "common/mixins" as *;
+@use "common/variables" as *;
 
 .social__list {
-  @include mixins.reset-list;
+  @include reset-list;
 }
 
 .social__link--vkontakte {

@@ -1,5 +1,6 @@
 @use "common/fonts";
 @use "common/global";
+@use "common/root";
 
 @use "blocks/text";
 @use "blocks/button";
@@ -16,4 +17,5 @@
 @use "blocks/logo";
 @use "blocks/outcome";
 @use "blocks/social";
+@use "blocks/banner";
 @use "blocks/visually-hidden";

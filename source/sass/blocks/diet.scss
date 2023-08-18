@@ -1,14 +1,23 @@
-@use "common/mixins";
+@use "common/mixins" as *;
+@use "common/variables" as *;
 
 .diet__list {
-  @include mixins.reset-list;
+  @include reset-list;
+}
+
+.diet__item {
+  background-color: var(--bg-dark);
+}
+
+.diet__title {
+  text-transform: uppercase;
 }
 
 .diet__text {
-  line-height: 24px;
+  font-family: $minor;
 }
 
 .diet__link {
-  color: #000000;
+  color: var(--color-common);
   text-transform: uppercase;
 }

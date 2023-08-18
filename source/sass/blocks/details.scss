@@ -1,10 +1,12 @@
-@use "common/mixins";
+@use "common/mixins" as *;
+@use "common/variables" as *;
 
 .details__list {
-  @include mixins.reset-list;
+  @include reset-list;
 }
 
 .details__item {
+  font-family: $minor;
   line-height: 24px;
   // counter-reset
   // counter-increment

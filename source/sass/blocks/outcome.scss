@@ -1,9 +1,26 @@
+@use "common/variables" as *;
+
+.outcome {
+  background-color: var(--bg-dark);
+}
+
+.outcome__title {
+  line-height: 40px;
+}
+
 .outcome__text {
+  font-family: $minor;
   line-height: 24px;
 }
 
 .outcome__desc {
   text-transform: uppercase;
+  font-family: $minor;
+}
+
+.outcome__desc--substyle {
+  text-transform: uppercase;
+  line-height: 20px;
 }
 
 .outcome__number {

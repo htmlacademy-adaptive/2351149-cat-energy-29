@@ -1,18 +1,17 @@
-@use "common/mixins";
+@use "common/mixins" as *;
+@use "common/variables" as *;
 
 .header {
-  background-color: red;
+  display: flex;
+  background-color: var(--color-bg);
 }
 
 .header__list {
-  @include mixins.reset-list;
+  @include reset-list;
+  // display: none;
 }
 
 .header__link {
-  color: #111111;
+  color: var(--color-rare);
   text-transform: uppercase;
-}
-
-.header__link--light {
-  color: #ffffff;
 }
