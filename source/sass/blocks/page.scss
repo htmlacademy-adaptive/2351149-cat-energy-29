@@ -1,16 +1,28 @@
-@use "common/fonts";
+@use "common/variables" as *;
 
 .page {
   height: 100%;
 }
 
+.page__container {
+  width: $mobile;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+    position: relative;
+  }
+}
+
 .page__body {
-  font-family: "Oswald", "Arial", sans-serif;
-  color: #000000;
-  background-color: #ffffff;
+  font-family: $major;
+  color: var(--color-common);
+  background-color: var(--bg-lightest);
   margin: 0 auto;
   width: 1440px;
   height: 100%;
 }
-
-

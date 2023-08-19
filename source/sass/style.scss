@@ -1,13 +1,12 @@
 @use "common/fonts";
 @use "common/global";
+@use "common/root";
 
-
-@use "blocks/text";
 @use "blocks/button";
+@use "blocks/page";
 @use "blocks/card";
 @use "blocks/card-narrow";
 @use "blocks/catalog";
-@use "blocks/catalog-extra";
 @use "blocks/details";
 @use "blocks/diet";
 @use "blocks/filter";
@@ -15,6 +14,5 @@
 @use "blocks/hero";
 @use "blocks/logo";
 @use "blocks/outcome";
-@use "blocks/page";
 @use "blocks/social";
-@use "blocks/visually-hidden";
+@use "blocks/banner";

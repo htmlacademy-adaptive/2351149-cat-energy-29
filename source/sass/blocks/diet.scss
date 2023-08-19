@@ -1,14 +1,51 @@
-@use "common/mixins";
+@use "common/mixins" as *;
+@use "common/variables" as *;
 
 .diet__list {
-  @include mixins.reset-list;
+  @include reset-list;
+
+  @media (min-width: $desktop) {
+    display: flex;
+  }
+}
+
+.diet__item {
+  background-color: var(--bg-dark);
+}
+
+.diet__title {
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .diet__text {
-  line-height: 24px;
+  font-family: $minor;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-common);
+  }
 }
 
 .diet__link {
-  color: #000000;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--color-common);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--color-common);
+  }
 }

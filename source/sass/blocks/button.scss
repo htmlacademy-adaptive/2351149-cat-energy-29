@@ -1,10 +1,13 @@
+@use "common/variables" as *;
+
 .button {
   display: inline-flex;
   min-height: 40px;
+  justify-content: center;
   align-items: center;
   border: none;
-  color: #ffffff;
-  background-color: var(--basic-green, #68B738);
+  color: var(--color-main);
+  background-color: var(--bg-bright);
 }
 
 .button__catalog {
@@ -20,11 +23,12 @@
 }
 
 .button__catalog--dim {
-  background-color: #f2f2f2;
+  color: var(--color-casual);
+  background-color: var(--bg-dark);
 }
 
 .button__form {
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 20px;
   text-transform: uppercase;
-  width: 570px;
 }

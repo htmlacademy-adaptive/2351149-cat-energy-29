@@ -1,41 +1,176 @@
-@use "common/mixins";
+@use "common/mixins" as *;
+@use "common/variables" as *;
+
+.filter__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
 
 .filter__gist {
-  line-height: 30px;
+  font-size: 14px;
+  line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .filter__fieldset {
+  display: flex;
+  flex-direction: column;
   border: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+  }
+}
+
+.filter__fieldset--inline {
+  @media (min-width: $desktop) {
+    display: inline-flex;
+  }
 }
 
 .filter__characteristic--text {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--color-casual);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+.filter__characteristic--input {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--color-casual);
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: normal;
+  }
 }
 
 .filter__list--radio {
-  @include mixins.reset-list;
-}
-
-.filte__contacts--email,
-.filte__contacts--phone {
-  text-transform: uppercase;
-}
-
-.filter__list--checkbox {
-  @include mixins.reset-list;
+  @include reset-list;
 }
 
 .filter__radio--text {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--color-casual);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+.filter__subtitle {
+  font-size: 24px;
+  line-height: 26px;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.filter__contacts {
+  display: inline-flex;
+  @media (min-width: $desktop) {
+    display: inline-flex;
+  }
+}
+
+.filter__contacts--email,
+.filter__contacts--phone {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--color-casual);
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+.filter__contacts--input {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--color-casual);
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: normal;
+  }
 }
 
 .filter__textarea {
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--color-casual);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.filter__list--checkbox {
+  @include reset-list;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.filter__textarea {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .filter__checkbox--text {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--color-casual);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+.filter__requirment {
+  font-family: $minor;
+  font-size: 14px;
+  line-height: 16px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+  }
 }

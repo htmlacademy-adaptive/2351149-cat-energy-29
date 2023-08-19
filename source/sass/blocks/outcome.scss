@@ -1,11 +1,85 @@
+@use "common/variables" as *;
+
+.outcome {
+  background-color: var(--bg-dark);
+
+  @media (min-width: $tablet) {
+    background: none;;
+  }
+}
+
+.outcome__container {
+  @media (min-width: $desktop) {
+    background-color: var(--bg-dark);
+  }
+}
+
+.outcome__title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+    color: var(--color-common);
+  }
+
+  @media (min-width: $desktop) {
+    background-color: var(--bg-lightest);
+  }
+}
+
 .outcome__text {
-  line-height: 24px;
+  font-family: $minor;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .outcome__desc {
+  font-family: $minor;
+  font-size: 12px;
+  line-height: 12px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.outcome__desc--substyle {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+  }
 }
 
 .outcome__number {
+  font-size: 24px;
+  line-height: 24px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.outcome__number--substyle{
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+  }
 }

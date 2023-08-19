@@ -1,18 +1,32 @@
-@use "common/mixins";
+@use "common/mixins" as *;
+@use "common/variables" as *;
 
 .header {
-  background-color: red;
+  display: flex;
+
+  @media (min-width: $desktop) {
+    position: absolute;
+  }
 }
 
 .header__list {
-  @include mixins.reset-list;
+  @include reset-list;
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: flex;
+  }
 }
 
 .header__link {
-  color: #111111;
-  text-transform: uppercase;
-}
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--color-common);
+    text-transform: uppercase;
+  }
 
-.header__link--light {
-  color: #ffffff;
+  @media (min-width: $desktop) {
+    color: var(--color-main);
+  }
 }

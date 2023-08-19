@@ -1,11 +1,36 @@
-@use "common/mixins";
+@use "common/mixins" as *;
+@use "common/variables" as *;
+
+.details__title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
 
 .details__list {
-  @include mixins.reset-list;
+  @include reset-list;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .details__item {
-  line-height: 24px;
+  font-family: $minor;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+    width: 230px;
+  }
   // counter-reset
   // counter-increment
 }
