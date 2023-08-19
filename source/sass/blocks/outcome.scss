@@ -8,6 +8,12 @@
   }
 }
 
+.outcome__container {
+  @media (min-width: $desktop) {
+    background-color: var(--bg-dark);
+  }
+}
+
 .outcome__title {
   font-size: 36px;
   line-height: 40px;
@@ -17,6 +23,10 @@
     font-size: 60px;
     line-height: 60px;
     color: var(--color-common);
+  }
+
+  @media (min-width: $desktop) {
+    background-color: var(--bg-lightest);
   }
 }
 

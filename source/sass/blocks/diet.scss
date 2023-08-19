@@ -3,6 +3,10 @@
 
 .diet__list {
   @include reset-list;
+
+  @media (min-width: $desktop) {
+    display: flex;
+  }
 }
 
 .diet__item {

@@ -34,7 +34,7 @@
           <h1 class="filter__title">Подбор программы</h1>
           <p class="filter__gist">Заполните анкету, и мы подберем программу питания для вашего кота</p>
           <form class="filter__form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="filter__fieldset">
+            <fieldset class="filter__fieldset filter__fieldset--inline">
               <legend class="visually-hidden">Основные характеристики кота</legend>
               <label class="filter__characteristic">
                 <span class="filter__characteristic--text">Имя:*</span>
@@ -49,7 +49,7 @@
                 <input type="text" name="cat's age" placeholder="7">
               </label>
             </fieldset>
-            <fieldset class="filter__fieldset">
+            <fieldset class="filter__fieldset filter__fieldset--inline">
               <legend class="visually-hidden">Тип изменения веса</legend>
               <ul class="filter__list--radio">
                 <li>
@@ -78,7 +78,7 @@
                 <span class="filter__contacts--email">E-mail:*</span>
                 <input class="filter__contacts--input" type="text" name="e-mail" placeholder="кuklachev@gmail.com" maxlength="100" required>
               </label>
-              <label>
+              <label class="filter__contacts">
                 <span class="filter__contacts--phone">Телефон:*</span>
                 <input class="filter__contacts--input" type="number" name="phone" placeholder="8 (960) 900-60-90" required>
               </label>

@@ -1,5 +1,11 @@
 @use "common/variables" as *;
 
+.card {
+  @media (min-width: $tablet) {
+    background-color: var(--bg-dark);
+  }
+}
+
 .card__title {
   font-size: 16px;
   line-height: 20px;

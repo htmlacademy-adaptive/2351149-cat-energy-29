@@ -3,6 +3,10 @@
 
 .header {
   display: flex;
+
+  @media (min-width: $desktop) {
+    position: absolute;
+  }
 }
 
 .header__list {
@@ -20,5 +24,9 @@
     line-height: 24px;
     color: var(--color-common);
     text-transform: uppercase;
+  }
+
+  @media (min-width: $desktop) {
+    color: var(--color-main);
   }
 }

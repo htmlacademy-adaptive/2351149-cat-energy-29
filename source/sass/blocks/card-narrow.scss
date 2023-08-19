@@ -1,5 +1,12 @@
 @use "common/variables" as *;
 
+.card-narrow {
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .card-narrow__subtitle {
   font-size: 16px;
   line-height: 16px;

@@ -6,6 +6,10 @@
 
 .banner--dark {
   background-color: var(--bg-dark);
+
+  @media (min-width: $desktop) {
+    background:none;
+  }
 }
 
 .banner__slogan {
