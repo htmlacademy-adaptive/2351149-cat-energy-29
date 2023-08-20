@@ -1,20 +1,23 @@
 @use "common/variables" as *;
 
 .outcome {
+  display: flex;
+  flex-direction: column;
+  padding-block: 25px 40px;
   background-color: var(--bg-dark);
 
   @media (min-width: $tablet) {
-    background: none;;
+    background: none;
   }
-}
 
-.outcome__container {
   @media (min-width: $desktop) {
+    flex-direction: row;
     background-color: var(--bg-dark);
   }
 }
 
 .outcome__title {
+  margin: 0 0 40px;
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
@@ -31,6 +34,7 @@
 }
 
 .outcome__text {
+  margin: 0 0 20px;
   font-family: $minor;
   font-size: 14px;
   line-height: 18px;
@@ -41,11 +45,39 @@
   }
 }
 
+// .outcome__wrapper {
+
+// }
+
+.outcome__list {
+  margin: 0 0 34px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.outcome__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 124px;
+  height: 70px;
+  border: 1px solid var(--border-mega-light);
+  border-radius: 3px;
+}
+
 .outcome__desc {
+  position: absolute;
+  top: 62px;
+  width: 81px;
+  min-height: 24px;
   font-family: $minor;
   font-size: 12px;
   line-height: 12px;
-  text-transform: uppercase;
+  background-color: var(--bg-dark);
+  text-transform: lowercase;
+  text-align: center;
 
   @media (min-width: $tablet) {
     font-size: 14px;
@@ -53,10 +85,18 @@
   }
 }
 
+.outcome__wrapper--price {
+  margin: 0 0 20px;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+
 .outcome__desc--substyle {
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
 
   @media (min-width: $tablet) {
     font-size: 20px;
@@ -64,6 +104,7 @@
 }
 
 .outcome__number {
+  margin: 0;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;

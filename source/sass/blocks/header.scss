@@ -2,23 +2,47 @@
 @use "common/variables" as *;
 
 .header {
+  position: relative;
   display: flex;
+  justify-content: space-between;
+  min-height: 65px;
 
   @media (min-width: $desktop) {
     position: absolute;
   }
 }
 
+.header__navigation {
+  position: absolute;
+  z-index: 1;
+  bottom: -195px;
+  width: 100%;
+  background-color: var(--bg-lightest);
+}
+
 .header__list {
   @include reset-list;
   display: none;
+  display: flex;
+  flex-direction: column;
 
-  @media (min-width: $tablet) {
-    display: flex;
-  }
+  // @media (min-width: $tablet) {
+  //   display: flex;
+  // }
 }
 
 .header__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 65px;
+  width: 100%;
+  color: var(--color-common);
+  text-transform: uppercase;
+  border-top: 1px solid var(--border-super-light);
+
+
+
   @media (min-width: $tablet) {
     font-size: 18px;
     line-height: 24px;
@@ -29,4 +53,25 @@
   @media (min-width: $desktop) {
     color: var(--color-main);
   }
+}
+
+.header__toggle {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+  align-self: center;
+  border: none;
+  background: none;
+}
+
+.header__toggle::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 1px;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-common);
+  box-shadow: 0 8px 0 0 var(--color-common), 0 16px 0 0 var(--color-common);
 }

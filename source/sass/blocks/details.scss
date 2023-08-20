@@ -1,7 +1,12 @@
 @use "common/mixins" as *;
 @use "common/variables" as *;
 
+.details {
+  padding-block: 20px 49px;
+}
+
 .details__title {
+  margin: 0 0 40px;
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
@@ -14,6 +19,9 @@
 
 .details__list {
   @include reset-list;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
   @media (min-width: $tablet) {
     display: flex;
@@ -22,6 +30,23 @@
 }
 
 .details__item {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    background-color: var(--bg-bright);
+  }
+  // counter-reset
+  // counter-increment
+}
+
+.details__text {
   font-family: $minor;
   font-size: 14px;
   line-height: 18px;
@@ -31,6 +56,4 @@
     line-height: 24px;
     width: 230px;
   }
-  // counter-reset
-  // counter-increment
 }

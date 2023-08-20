@@ -3,21 +3,32 @@
 
 .diet__list {
   @include reset-list;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tablet) {
+    gap: 30px;
+  }
 
   @media (min-width: $desktop) {
-    display: flex;
+    flex-direction: row;
+    gap: 80px;
   }
 }
 
 .diet__item {
+  padding: 20px 20px 18px;
   background-color: var(--bg-dark);
 }
 
 .diet__title {
+  margin: 10px 30px 0;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
+  text-align: center;
 
   @media (min-width: $tablet) {
     font-size: 36px;
@@ -26,9 +37,12 @@
 }
 
 .diet__text {
+  margin: 0;
+  padding-block: 27px 22px;
   font-family: $minor;
   font-size: 14px;
   line-height: 18px;
+  border-bottom: 1px solid var(--border-light);
 
   @media (min-width: $tablet) {
     font-size: 16px;
@@ -38,10 +52,18 @@
 }
 
 .diet__link {
+  display: inline-flex;
+  width: 56%;
+  margin-top: 15px;
+  min-height: 24px;
   font-size: 16px;
   line-height: 16px;
   color: var(--color-common);
+  background-color: var(--bg-dark);
+  align-items: center;
   text-transform: uppercase;
+  border: none;
+  cursor: pointer;
 
   @media (min-width: $tablet) {
     font-size: 20px;
