@@ -8,6 +8,7 @@
 
   @media (min-width: $tablet) {
     background: none;
+    padding-block: 45px 101px;
   }
 
   @media (min-width: $desktop) {
@@ -115,7 +116,7 @@
   }
 }
 
-.outcome__number--substyle{
+.outcome__number--substyle {
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
@@ -123,4 +124,8 @@
   @media (min-width: $tablet) {
     font-size: 20px;
   }
+}
+
+.outcome__image-after {
+  display: none;
 }

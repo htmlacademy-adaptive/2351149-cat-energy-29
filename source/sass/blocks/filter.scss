@@ -91,6 +91,7 @@
 
 .filter__contacts {
   display: inline-flex;
+
   @media (min-width: $desktop) {
     display: inline-flex;
   }
@@ -139,17 +140,6 @@
   @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
-  }
-}
-
-.filter__textarea {
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-
-  @media (min-width: $tablet) {
-    font-size: 20px;
-    line-height: 30px;
   }
 }
 

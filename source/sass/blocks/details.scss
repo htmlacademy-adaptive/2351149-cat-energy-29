@@ -3,6 +3,11 @@
 
 .details {
   padding-block: 20px 49px;
+
+  @media (min-width: $tablet) {
+    padding-block: 45px 47px;
+    border-bottom: 1px solid var(--border-super-light);
+  }
 }
 
 .details__title {
@@ -12,6 +17,7 @@
   font-weight: 400;
 
   @media (min-width: $tablet) {
+    margin: 0 0 72px;
     font-size: 60px;
     line-height: 60px;
   }
@@ -19,19 +25,33 @@
 
 .details__list {
   @include reset-list;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 20px;
 
   @media (min-width: $tablet) {
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 37px 153px;
   }
 }
 
 .details__item {
+  position: relative;
   display: flex;
   align-items: center;
+  font-family: $minor;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+    width: 230px;
+    min-height: 280px;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 31px;
+    padding: 0 0 57px;
+  }
 
   &::before {
     content: "";
@@ -41,19 +61,26 @@
     height: 60px;
     margin-right: 20px;
     background-color: var(--bg-bright);
+
+    @media (min-width: $tablet) {
+      display: grid;
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
   }
-  // counter-reset
-  // counter-increment
-}
 
-.details__text {
-  font-family: $minor;
-  font-size: 14px;
-  line-height: 18px;
-
-  @media (min-width: $tablet) {
-    font-size: 16px;
-    line-height: 24px;
-    width: 230px;
+  &::after {
+    @media (min-width: $tablet) {
+      content: counter(section);
+      counter-increment: section;
+      position: absolute;
+      z-index: -1;
+      left: 110px;
+      top: 90px;
+      font-family: $major;
+      font-size: 280px;
+      color: var(--color-counter);
+    }
   }
 }

@@ -3,13 +3,18 @@
 .banner {
   display: flex;
   padding-block: 26px;
+
+  @media (min-width: $tablet) {
+    padding: 60px 70px;
+    justify-content: space-between;
+  }
 }
 
 .banner--dark {
   background-color: var(--bg-dark);
 
   @media (min-width: $desktop) {
-    background:none;
+    background: none;
   }
 }
 
@@ -21,10 +26,13 @@
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 26px;
+    width: 163px;
+    min-height: 78px;
   }
 }
 
 .banner__address {
+  font-family: $minor;
   font-size: 14px;
   line-height: 20px;
   font-style: normal;
@@ -32,5 +40,8 @@
   @media (min-width: $tablet) {
     font-size: 16px;
     line-height: 20px;
+    width: 157px;
+    min-height: 80px;
+    text-align: right;
   }
 }
