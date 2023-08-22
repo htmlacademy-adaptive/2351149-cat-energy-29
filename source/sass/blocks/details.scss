@@ -8,6 +8,10 @@
     padding-block: 45px 47px;
     border-bottom: 1px solid var(--border-super-light);
   }
+
+  @media (min-width: $desktop) {
+    border: none;
+  }
 }
 
 .details__title {
@@ -31,6 +35,10 @@
   @media (min-width: $tablet) {
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 37px 153px;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 37px 95px;
   }
 }
 

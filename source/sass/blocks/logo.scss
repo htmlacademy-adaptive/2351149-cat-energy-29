@@ -7,12 +7,29 @@
   min-height: 65px;
 
   @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 174px;
     min-height: 100px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 202px;
+    min-height: 170px;
   }
 }
 
 .logo--icon {
   margin: 12px 0 0 20px;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 0 0 110px;
+  }
 }
 
 .logo--text {
@@ -20,4 +37,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (min-width: $tablet) {
+    position: static;
+    transform: none;
+  }
 }

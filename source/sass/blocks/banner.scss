@@ -8,6 +8,15 @@
     padding: 60px 70px;
     justify-content: space-between;
   }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 565px;
+    min-height: 199px;
+    background-color: var(--bg-lightest);
+  }
 }
 
 .banner--dark {

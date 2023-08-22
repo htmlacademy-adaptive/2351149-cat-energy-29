@@ -44,11 +44,17 @@
   display: block;
 
   @media (min-width: $tablet) {
-    width: $tablet;
+    width: 100%;
     height: 400px;
   }
 
   @media (min-width: $desktop) {
-    width: $desktop;
+    width: 100%;
+  }
+}
+
+.page__footer {
+  @media (min-width: $desktop) {
+    position: relative
   }
 }

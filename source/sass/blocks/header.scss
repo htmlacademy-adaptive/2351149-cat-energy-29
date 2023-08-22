@@ -15,6 +15,8 @@
 
   @media (min-width: $desktop) {
     position: absolute;
+    z-index: 1;
+    width: 100%;
   }
 }
 
@@ -26,6 +28,11 @@
 
   @media (min-width: $tablet) {
     width: 436px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 110px;
+    background: none;
   }
 }
 
@@ -91,6 +98,10 @@
     display: block;
     width: 100%;
     box-shadow: 0 10px 0 1px var(--border-bright);
+  }
+
+  @media (min-width: $desktop) {
+    box-shadow: 0 10px 0 1px var(--border-lightest);
   }
 }
 

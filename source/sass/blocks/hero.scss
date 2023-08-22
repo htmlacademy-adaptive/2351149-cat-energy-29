@@ -16,6 +16,7 @@
   }
 
   @media (min-width: $desktop) {
+    padding-block: 0 52px;
     background-image: linear-gradient(to right, var(--bg-lightest) 0% 50%, var(--bg-bright) 50% 100%),
       url("../../img/index/bg-cat.png");
     background-repeat: no-repeat;
@@ -38,6 +39,11 @@
     color: var(--color-common);
     text-align: left;
   }
+
+  @media (min-width: $desktop) {
+    width: 35%;
+    margin: 224px 0 40px 80px;
+  }
 }
 
 .hero__text {
@@ -56,6 +62,11 @@
     color: var(--color-common);
     text-align: left;
   }
+
+  @media (min-width: $desktop) {
+    width: 35%;
+    margin: 0 0 50px 80px;
+  }
 }
 
 .hero__link {
@@ -73,6 +84,10 @@
     font-size: 18px;
     line-height: 24px;
     text-align: center;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 0 0 80px;
   }
 }
 
