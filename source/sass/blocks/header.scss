@@ -67,6 +67,17 @@
   }
 }
 
+.header__list li {
+  &:last-child {
+    border-bottom: 1px solid var(--border-super-light);
+
+    @media (min-width: $tablet) {
+      border: none;
+    }
+  }
+}
+
+
 .header__link {
   position: relative;
   display: inline-flex;
@@ -77,6 +88,10 @@
   color: var(--color-common);
   text-transform: uppercase;
   border-top: 1px solid var(--border-super-light);
+
+  @media (min-width: $tablet) {
+    border-bottom: none;
+  }
 
   @media (min-width: $tablet) {
     display: block;
