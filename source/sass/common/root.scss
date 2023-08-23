@@ -11,6 +11,7 @@
   --grey-lightest: #ebebeb;
   --grey-mega-light: #cdcdcd;
   --grey-super-light: #e6e6e6;
+  --grey-ultra-light: #e7e7e7;
   //
   --color-main: var(--white);
   --color-common: var(--black);
@@ -18,6 +19,7 @@
   --color-rare: var(--black-light);
   --color-rarest: var(--black-lightest);
   --color-counter: var(--grey-dark);
+  --color-bright: var(--green);
   --bg-lightest: var(--white);
   --bg-bright: var(--green);
   --bg-dark: var(--grey-dark);
@@ -28,4 +30,5 @@
   --border-lightest: var(--grey-lightest);
   --border-mega-light: var(--grey-mega-light);
   --border-super-light: var(--grey-super-light);
+  --border-ultra-light: var(--grey-ultra-light);
 }

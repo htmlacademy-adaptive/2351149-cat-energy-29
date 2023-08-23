@@ -35,9 +35,11 @@
   @media (min-width: $tablet) {
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 37px 153px;
+    counter-reset: cards;
   }
 
   @media (min-width: $desktop) {
+    grid-template-columns: repeat(auto-fit, minmax(246px, 1fr));
     gap: 37px 95px;
   }
 }
@@ -53,10 +55,17 @@
   @media (min-width: $tablet) {
     font-size: 16px;
     line-height: 24px;
-    width: 230px;
+    min-width: 230px;
     min-height: 280px;
     flex-direction: column;
     align-items: baseline;
+    gap: 31px;
+    padding: 0 0 57px;
+  }
+
+  @media (min-width: $desktop) {
+
+    min-width: 246px;
     gap: 31px;
     padding: 0 0 57px;
   }
@@ -80,12 +89,12 @@
 
   &::after {
     @media (min-width: $tablet) {
-      content: counter(section);
-      counter-increment: section;
-      position: absolute;
+      content: counter(cards);
+      counter-increment: cards;
+      margin-left: auto;
+      position: relative;
       z-index: -1;
-      left: 110px;
-      top: 90px;
+      top: -120px;
       font-family: $major;
       font-size: 280px;
       color: var(--color-counter);

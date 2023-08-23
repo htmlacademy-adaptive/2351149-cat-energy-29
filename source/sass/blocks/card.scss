@@ -13,6 +13,10 @@
     padding: 0 37px 40px;
     background: linear-gradient(to bottom, var(--bg-lightest) 0 16%, var(--bg-dark) 16% 100%);
   }
+
+  @media (min-width: $desktop) {
+    min-width:245px;
+  }
 }
 
 .card:last-child {

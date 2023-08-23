@@ -90,10 +90,6 @@
   border-top: 1px solid var(--border-super-light);
 
   @media (min-width: $tablet) {
-    border-bottom: none;
-  }
-
-  @media (min-width: $tablet) {
     display: block;
     padding-block: 15px;
     font-size: 18px;
@@ -101,7 +97,9 @@
     color: var(--color-common);
     border: none;
   }
+}
 
+.header__link--light {
   @media (min-width: $desktop) {
     color: var(--color-main);
   }
@@ -114,7 +112,9 @@
     width: 100%;
     box-shadow: 0 10px 0 1px var(--border-bright);
   }
+}
 
+.header__link--current-light::after {
   @media (min-width: $desktop) {
     box-shadow: 0 10px 0 1px var(--border-lightest);
   }
