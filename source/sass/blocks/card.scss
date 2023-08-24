@@ -15,13 +15,13 @@
   }
 
   @media (min-width: $desktop) {
-    min-width:245px;
+    min-width: 245px;
   }
 }
 
 .card:last-child {
   @media (min-width: $tablet) {
-    background: none;;
+    background: none;
     border: 2px solid var(--border-dark);
   }
 }
