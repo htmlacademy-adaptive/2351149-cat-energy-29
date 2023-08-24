@@ -26,17 +26,17 @@
 }
 
 .page__wrapper {
-  padding-left: $pad-mob;
-  padding-right: $pad-mob;
+  padding-left: $padding-mobile;
+  padding-right: $padding-mobile;
 
   @media (min-width: $tablet) {
-    padding-left: $pad-tab;
-    padding-right: $pad-tab;
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
   }
 
   @media (min-width: $desktop) {
-    padding-left: $pad-desk;
-    padding-right: $pad-desk;
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
   }
 }
 
