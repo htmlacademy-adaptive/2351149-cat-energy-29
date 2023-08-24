@@ -1,47 +1,114 @@
 @use "common/mixins" as *;
 @use "common/variables" as *;
 
+.filter {
+  padding-block: 27px 32px;
+  border-top: 1px solid var(--border-light);
+
+  @media (min-width: $tablet) {
+    border: none;
+  }
+
+  @media (min-width: $desktop) {
+    padding-block: 188px 79px;
+  }
+}
+
 .filter__title {
+  margin: 0 20px 37px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
 
   @media (min-width: $tablet) {
+    margin: 0 70px 54px;
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 110px 55px;
   }
 }
 
 .filter__gist {
+  margin: 0 28px 39px 20px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
+    width: 50%;
+    margin: 0 70px 66px;
     font-size: 20px;
     line-height: 30px;
   }
+
+  @media (min-width: $desktop) {
+    width: 323px;
+    margin: 0 110px 66px;
+  }
 }
 
-.filter__fieldset {
-  display: flex;
-  flex-direction: column;
+.filter__form {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 60px;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 0 80px;
+  }
+}
+
+.filter__list--characteristic {
+  @include reset-list;
+  display: grid;
+  gap: 13px;
+  padding: 0 20px;
+
+  @media (min-width: $tablet) {
+    padding: 0 70px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 0 0 110px;
+    gap: 20px;
+  }
+}
+
+.filter__fieldset--characteristic {
+  margin: 0 0 22px;
+  padding: 0 0 21px;
   border: none;
+  border-bottom: 1px solid var(--border-light);
+
+  @media (min-width: $tablet) {
+    grid-area: 1/1/2/3;
+    margin: 0 0 72px;
+    padding: 0;
+    border: none;
+  }
 
   @media (min-width: $desktop) {
-    display: block;
+    grid-area: 1/1/2/2;
+    margin: 0 0 70px;
   }
 }
 
-.filter__fieldset--inline {
-  @media (min-width: $desktop) {
-    display: inline-flex;
-  }
+.filter__characteristic {
+  display: flex;
+  gap: 13px;
 }
 
-.filter__characteristic--text {
+.filter__characteristic--text,
+.filter__contacts--email,
+.filter__contacts--phone {
+  max-width: 50%;
   font-size: 16px;
   line-height: 18px;
+  align-self: center;
   color: var(--color-casual);
   text-transform: uppercase;
 
@@ -51,20 +118,105 @@
   }
 }
 
-.filter__characteristic--input {
+.filter__characteristic--input,
+.filter__contacts--input {
+  display: block;
+  width: 100%;
+  min-height: 45px;
+  padding: 0 15px;
+  font-family: inherit;
   font-size: 16px;
   line-height: 18px;
   color: var(--color-casual);
   text-transform: uppercase;
+  border: 1px solid var(--border-ultra-light);
 
   @media (min-width: $tablet) {
+    min-height: 52px;
     font-size: 20px;
     line-height: normal;
+  }
+}
+
+.filter__fieldset--radio {
+  margin: 0 0 26px;
+  padding: 0 0 19px;
+  border: none;
+  border-bottom: 1px solid var(--border-light);
+
+  @media (min-width: $tablet) {
+    grid-area: 2/1/3/3;
+    margin: 0 0 65px;
+    padding: 0 70px;
+    border: none;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: 1/2/2/3;
+    margin: 0;
+    padding: 0 110px 0 0;
   }
 }
 
 .filter__list--radio {
   @include reset-list;
+  gap: 13px;
+  padding: 0 20px;
+  display: grid;
+
+  @media (min-width: $tablet) {
+    gap: 23px;
+    padding: 23px 27px;
+    border: 1px solid var(--border-ultra-light);
+  }
+
+  @media (min-width: $desktop) {
+    padding: 30px 28px;
+  }
+}
+
+.filter__radio {
+  position: relative;
+  padding-left: 45px;
+
+  @media (min-width: $tablet) {
+    padding-left: 65px;
+  }
+}
+
+.filter__radio--backup {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--border-mega-light);
+  border-radius: 50%;
+  background-color: var(--bg-lightest);
+
+  @media (min-width: $tablet) {
+    top: -8px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.filter__radio--invis[type="radio"]:checked + .filter__radio--backup::before {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--bg-bright);
+  border-radius: 50%;
+  content: "";
+
+  @media (min-width: $tablet) {
+    top: 10px;
+    left: 10px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .filter__radio--text {
@@ -79,34 +231,99 @@
   }
 }
 
-.filter__subtitle {
-  font-size: 24px;
-  line-height: 26px;
+.filter__fieldset--contacts {
+  display: grid;
+  margin: 0 0 24px;
+  padding: 0;
+  border: none;
 
   @media (min-width: $tablet) {
+    grid-area: 3/1/4/3;
+    margin: 0 0 65px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: 2/1/3/3;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 80px;
+    margin: 0 0 70px;
+  }
+}
+
+.filter__fieldset--contacts div {
+  @media (min-width: $desktop) {
+    grid-area: 1/1/2/3;
+  }
+}
+
+.filter__fieldset--contacts label:nth-child(2) {
+  @media (min-width: $desktop) {
+    grid-area: 2/1/3/2;
+    margin: 0 0 0 110px;
+  }
+}
+
+.filter__fieldset--contacts label:nth-child(3) {
+  @media (min-width: $desktop) {
+    grid-area: 2/2/3/3;
+    margin: 0 110px 0 0;
+  }
+}
+
+.filter__subtitle--contacts,
+.filter__subtitle--comments,
+.filter__subtitle--checkbox {
+  position: relative;
+  z-index: 1;
+  float: left;
+  max-width: 70%;
+  padding: 0 20px 0;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+  background-color: var(--bg-lightest);
+
+  @media (min-width: $tablet) {
+    max-width: 93%;
+    margin: 0 0 80px 30px;
+    padding: 0 40px 0;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 0 80px 70px;
+  }
+}
+
+.filter__subtitle--contacts {
+  margin: 0 0 35px;
+
+  @media (min-width: $tablet) {
+    margin: 0 0 76px 30px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 0 76px 70px;
   }
 }
 
 .filter__contacts {
-  display: inline-flex;
+  display: flex;
+  gap: 13px;
+  margin: 0 20px 14px;
+
+  @media (min-width: $tablet) {
+    margin: 0 70px 20px;
+  }
+
   @media (min-width: $desktop) {
     display: inline-flex;
   }
 }
 
-.filter__contacts--email,
-.filter__contacts--phone {
-  font-size: 16px;
-  line-height: 18px;
-  color: var(--color-casual);
-  text-transform: uppercase;
-
-  @media (min-width: $tablet) {
-    font-size: 20px;
-    line-height: normal;
-  }
+.filter__contacts--email {
+  white-space: nowrap;
 }
 
 .filter__contacts--input {
@@ -121,36 +338,138 @@
   }
 }
 
+.filter__fieldset--comments {
+  margin: 0 0 23px;
+  padding: 0;
+  border: none;
+
+  @media (min-width: $tablet) {
+    grid-area: 4/1/5/3;
+    margin: 0 0 65px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: 3/1/4/3;
+    margin: 0 0 70px;
+  }
+}
+
+.filter__subtitle--comments {
+  margin: 0 0 38px;
+
+  @media (min-width: $tablet) {
+    margin: 0 0 87px 30px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 0 78px 70px;
+  }
+}
+
 .filter__textarea {
+  display: block;
+  width: calc(100% - 40px);
+  min-height: 150px;
+  margin: 0 20px;
+  padding: 14px;
+  font-family: inherit;
   font-size: 16px;
   line-height: 18px;
   color: var(--color-casual);
   text-transform: uppercase;
+  border: 1px solid var(--border-ultra-light);
 
   @media (min-width: $tablet) {
+    width: calc(100% - 140px);
+    margin: 0 70px;
+    padding: 11px 20px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    width: calc(100% - 220px);
+    margin: 0 110px;
+    padding: 9px 20px;
+  }
+}
+
+.filter__fieldset--checkbox {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 34px;
+  padding: 0;
+  border: none;
+
+  @media (min-width: $tablet) {
+    grid-area: 5/1/6/3;
+    margin: 0 0 57px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: 4/1/5/3;
+    margin: 0 0 65px;
+  }
+}
+
+.filter__subtitle--checkbox {
+  margin: 0 0 34px;
+
+  @media (min-width: $tablet) {
+    margin: 0 0 57px 30px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 0 57px 70px;
   }
 }
 
 .filter__list--checkbox {
   @include reset-list;
+  display: grid;
+  gap: 15px;
+  padding: 0 20px;
 
   @media (min-width: $tablet) {
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px 60px;
+    padding: 0 70px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
-.filter__textarea {
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
+.filter__checkbox {
+  position: relative;
+  padding-left: 45px;
 
   @media (min-width: $tablet) {
-    font-size: 20px;
-    line-height: 30px;
+    padding-left: 60px;
   }
+}
+
+.filter__checkbox--backup {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  padding: 1px;
+  border: 1px solid var(--border-mega-light);
+
+  @media (min-width: $tablet) {
+    top: -8px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    padding: 7px;
+  }
+}
+
+.filter__checkbox--invis[type="checkbox"]:checked + .filter__checkbox--backup path {
+  fill: var(--color-bright);
 }
 
 .filter__checkbox--text {
@@ -165,12 +484,40 @@
   }
 }
 
+.filter__button {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 0 auto 21px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    grid-area: 6/1/7/2;
+    width: calc(100% - 70px);
+    margin: 0 0 0 70px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: 5/1/6/2;
+  }
+}
+
 .filter__requirment {
+  width: 157px;
+  margin: 0 auto;
   font-family: $minor;
   font-size: 14px;
   line-height: 16px;
 
   @media (min-width: $tablet) {
+    grid-area: 6/2/7/3;
+    min-width: 180px;
+    margin: 0;
     font-size: 16px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: 5/2/6/3;
   }
 }

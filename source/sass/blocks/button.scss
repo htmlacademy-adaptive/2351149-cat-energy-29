@@ -9,26 +9,3 @@
   color: var(--color-main);
   background-color: var(--bg-bright);
 }
-
-.button__catalog {
-  font-family: inherit;
-  font-size: 16px;
-  line-height: 20px;
-  width: 169px;
-  text-transform: uppercase;
-}
-
-.button__catalog--extra {
-  width: 244px;
-}
-
-.button__catalog--dim {
-  color: var(--color-casual);
-  background-color: var(--bg-dark);
-}
-
-.button__form {
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-}

@@ -3,18 +3,32 @@
   --black: #000000;
   --black-light: #111111;
   --black-lightest: #222222;
-  --green: #68B738;
+  --green: #68b738;
   --grey-special: #444444;
   --grey-dark: #f2f2f2;
   --grey-darkest: #eaeaea;
-
+  --grey-light: #d9d9d9;
+  --grey-lightest: #ebebeb;
+  --grey-mega-light: #cdcdcd;
+  --grey-super-light: #e6e6e6;
+  --grey-ultra-light: #e7e7e7;
+  //
   --color-main: var(--white);
   --color-common: var(--black);
   --color-casual: var(--grey-special);
   --color-rare: var(--black-light);
   --color-rarest: var(--black-lightest);
+  --color-counter: var(--grey-dark);
+  --color-bright: var(--green);
   --bg-lightest: var(--white);
   --bg-bright: var(--green);
   --bg-dark: var(--grey-dark);
   --bg-darkest: var(--grey-darkest);
+  --border-dark: var(--grey-dark);
+  --border-bright: var(--green);
+  --border-light: var(--grey-light);
+  --border-lightest: var(--grey-lightest);
+  --border-mega-light: var(--grey-mega-light);
+  --border-super-light: var(--grey-super-light);
+  --border-ultra-light: var(--grey-ultra-light);
 }
