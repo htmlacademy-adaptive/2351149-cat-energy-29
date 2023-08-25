@@ -32,8 +32,15 @@
   align-self: center;
 
   @media (min-width: $tablet) {
+    width: 200px;
+    height: 210px;
     margin: 0 auto 160px;
     display: block;
+  }
+
+  @media (min-width: $desktop) {
+    width: 170px;
+    height: 210px;
   }
 }
 
