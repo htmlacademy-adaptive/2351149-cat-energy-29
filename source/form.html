@@ -11,8 +11,12 @@
   <body class="page__body">
     <header class="header">
       <a class="logo" href="#">
-        <img class="logo--icon" src="img/logo-icon.png" alt="Кот победитель в плаще на фоне солнца." width="33" height="38">
-        <img class="logo--text" src="img/logo-text.png" alt="Текстовая версия логотипа cat energy." width="101" height="18">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-icon-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-icon-tablet.svg">
+          <img class="logo--icon" src="img/logo-icon-mobile.svg" alt="Кот победитель в плаще на фоне солнца." width="33" height="38">
+        </picture>
+        <img class="logo--text" src="img/logo-text.svg" alt="Текстовая версия логотипа cat energy." width="101" height="18">
       </a>
       <nav class="header__navigation header__navigation--closed">
         <ul class="header__list">

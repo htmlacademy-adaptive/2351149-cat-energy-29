@@ -117,14 +117,31 @@
   font-size: 16px;
   line-height: 20px;
   color: var(--color-main);
-  background-color: var(--bg-bright);
+  background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    url("../../img/catalog/catalog-bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   text-align: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../../img/catalog/catalog-bg-mobile@2x.png");
+  }
 
   @media (min-width: $tablet) {
     min-height: 200px;
     margin: 0 30px;
     padding: 71px 125px 69px 54%;
+    background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../../img/catalog/catalog-bg-tablet.png");
+    background-size: cover;
     text-align: left;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../../img/catalog/catalog-bg-tablet@2x.png");
+    }
   }
 
   @media (min-width: $desktop) {
@@ -132,6 +149,14 @@
     padding: 185px 42px 43px;
     min-width: 245px;
     min-height: 288px;
+    background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../../img/catalog/catalog-bg-mobile.png");
+    background-position: right;
     text-align: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../../img/catalog/catalog-bg-mobile@2x.png");
+    }
   }
 }

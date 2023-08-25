@@ -11,8 +11,12 @@
   <body class="page__body">
     <header class="header">
       <a class="logo" href="#">
-        <img class="logo--icon" src="img/logo-icon.png" alt="Кот победитель в плаще на фоне солнца." width="33" height="38">
-        <img class="logo--text" src="img/logo-text.png" alt="Текстовая версия логотипа cat energy." width="101" height="18">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-icon-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-icon-tablet.svg">
+          <img class="logo--icon" src="img/logo-icon-mobile.svg" alt="Кот победитель в плаще на фоне солнца." width="33" height="38">
+        </picture>
+        <img class="logo--text" src="img/logo-text.svg" alt="Текстовая версия логотипа cat energy." width="101" height="18">
       </a>
       <nav class="header__navigation header__navigation--closed">
         <ul class="header__list">
@@ -36,7 +40,10 @@
         <h1 class="catalog__title">Каталог продукции</h1>
         <ul class="catalog__list">
           <li class="card">
-            <img class="card__image" src="img/catalog/chicken.png" alt="Маленькая оранжевая упаковка." width="140" height="107">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/catalog/chicken-500-tablet.png 1x, img/catalog/chicken-500-tablet@2x.png 2x">
+              <img class="card__image" src="img/catalog/chicken-500-mobile.png 1x" srcset="img/catalog/chicken-500-mobile@2x.png 2x" width="140" height="107" alt="Маленькая оранжевая упаковка.">
+            </picture>
             <h2 class="card__title">Cat energy pro 500&nbsp;г</h2>
             <dl class="card__list">
               <dt class="card__property">Масса</dt>
@@ -49,7 +56,10 @@
             <button class="button card__button" type="button">Заказать</button>
           </li>
           <li class="card">
-            <img class="card__image" src="img/catalog/chicken.png" alt="Большая оранжевая упаковка." width="140" height="107">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/catalog/chicken-1000-tablet.png 1x, img/catalog/chicken-1000-tablet@2x.png 2x">
+              <img class="card__image" src="img/catalog/chicken-1000-mobile.png 1x" srcset="img/catalog/chicken-1000-mobile@2x.png 2x" width="140" height="107" alt="Большая оранжевая упаковка.">
+            </picture>
             <h2 class="card__title">Cat energy pro 1000&nbsp;г</h2>
             <dl class="card__list">
               <dt class="card__property">Масса</dt>
@@ -62,7 +72,10 @@
             <button class="button card__button" type="button">Заказать</button>
           </li>
           <li class="card">
-            <img class="card__image" src="img/catalog/chicken.png" alt="Маленькая зеленая упаковка." width="140" height="107">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/catalog/fish-500-tablet.png 1x, img/catalog/fish-500-tablet@2x.png 2x">
+              <img class="card__image" src="img/catalog/fish-500-mobile.png 1x" srcset="img/catalog/fish-500-mobile@2x.png 2x" width="140" height="107" alt="Маленькая зеленая упаковка.">
+            </picture>
             <h2 class="card__title">Cat energy pro 500&nbsp;г</h2>
             <dl class="card__list">
               <dt class="card__property">Масса</dt>
@@ -75,7 +88,10 @@
             <button class="button card__button" type="button">Заказать</button>
           </li>
           <li class="card">
-            <img class="card__image" src="img/catalog/chicken.png" alt="Большая зеленая упаковка." width="140" height="107">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/catalog/fish-1000-tablet.png 1x, img/catalog/fish-1000-tablet@2x.png 2x">
+              <img class="card__image" src="img/catalog/fish-1000-mobile.png 1x" srcset="img/catalog/fish-1000-mobile@2x.png 2x" width="140" height="107" alt="Большая зеленая упаковка.">
+            </picture>
             <h2 class="card__title">Cat energy pro 1000&nbsp;г</h2>
             <dl class="card__list">
               <dt class="card__property">Масса</dt>
@@ -88,7 +104,10 @@
             <button class="button card__button" type="button">Заказать</button>
           </li>
           <li class="card">
-            <img class="card__image" src="img/catalog/chicken.png" alt="Маленькая синяя упаковка." width="140" height="107">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/catalog/buckwheat-500-tablet.png 1x, img/catalog/buckwheat-500-tablet@2x.png 2x">
+              <img class="card__image" src="img/catalog/buckwheat-500-mobile.png 1x" srcset="img/catalog/buckwheat-500-mobile@2x.png 2x" width="140" height="107" alt="Маленькая синяя упаковка.">
+            </picture>
             <h2 class="card__title">Cat energy slim 500&nbsp;г</h2>
             <dl class="card__list">
               <dt class="card__property">Масса</dt>
@@ -101,7 +120,10 @@
             <button class="button card__button" type="button">Заказать</button>
           </li>
           <li class="card">
-            <img class="card__image" src="img/catalog/chicken.png" alt="Большая синяя упаковка." width="140" height="107">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/catalog/buckwheat-1000-tablet.png 1x, img/catalog/buckwheat-1000-tablet@2x.png 2x">
+              <img class="card__image" src="img/catalog/buckwheat-1000-mobile.png 1x" srcset="img/catalog/buckwheat-1000-mobile@2x.png 2x" width="140" height="107" alt="Большая синяя упаковка.">
+            </picture>
             <h2 class="card__title">Cat energy slim 1000&nbsp;г</h2>
             <dl class="card__list">
               <dt class="card__property">Масса</dt>
@@ -114,7 +136,10 @@
             <button class="button card__button" type="button">Заказать</button>
           </li>
           <li class="card">
-            <img class="card__image" src="img/catalog/chicken.png" alt="Маленькая фиолетовая упаковка." width="140" height="107">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/catalog/rice-500-tablet.png 1x, img/catalog/rice-500-tablet@2x.png 2x">
+              <img class="card__image" src="img/catalog/rice-500-mobile.png 1x" srcset="img/catalog/rice-500-mobile@2x.png 2x" width="140" height="107" alt="Маленькая фиолетовая упаковка.">
+            </picture>
             <h2 class="card__title">Cat energy slim 500&nbsp;г</h2>
             <dl class="card__list">
               <dt class="card__property">Масса</dt>
