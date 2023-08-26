@@ -4,6 +4,7 @@
   --black-light: #111111;
   --black-lightest: #222222;
   --green: #68b738;
+  --green-opacity: rgba(104, 183, 56, 0.85);
   --grey-special: #444444;
   --grey-dark: #f2f2f2;
   --grey-darkest: #eaeaea;
@@ -12,6 +13,7 @@
   --grey-mega-light: #cdcdcd;
   --grey-super-light: #e6e6e6;
   --grey-ultra-light: #e7e7e7;
+  --grey-muddy: #666666;
   //
   --color-main: var(--white);
   --color-common: var(--black);
@@ -22,6 +24,7 @@
   --color-bright: var(--green);
   --bg-lightest: var(--white);
   --bg-bright: var(--green);
+  --bg-cat: var(--green-opacity);
   --bg-dark: var(--grey-dark);
   --bg-darkest: var(--grey-darkest);
   --border-dark: var(--grey-dark);
@@ -31,4 +34,5 @@
   --border-mega-light: var(--grey-mega-light);
   --border-super-light: var(--grey-super-light);
   --border-ultra-light: var(--grey-ultra-light);
+  --border-muddy: var(--grey-muddy);
 }

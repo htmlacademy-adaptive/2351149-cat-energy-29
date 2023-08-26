@@ -2,10 +2,12 @@
 @use "common/variables" as *;
 
 .catalog {
+  margin: 0 0 26px;
   padding-block: 25px 0;
   border-top: 1px solid var(--border-light);
 
   @media (min-width: $tablet) {
+    margin: 0;
     padding-block: 40px 70px;
     border: none;
   }
@@ -16,7 +18,7 @@
 }
 
 .catalog--extra {
-  padding-block: 25px 35px;
+  padding-block: 0 35px;
 
   @media (min-width: $tablet) {
     padding-block: 0 70px;
@@ -53,9 +55,9 @@
 }
 
 .catalog__title--extra {
-  position: relative;
   z-index: 1;
   display: inline-flex;
+  width: fit-content;
   margin: 0 0 36px;
   padding: 0 20px 0;
   font-size: 24px;
@@ -71,6 +73,7 @@
   }
 
   @media (min-width: $desktop) {
+    grid-area: a;
     margin: 0 0 80px 70px;
   }
 }
@@ -117,14 +120,31 @@
   font-size: 16px;
   line-height: 20px;
   color: var(--color-main);
-  background-color: var(--bg-bright);
+  background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+    url("../../img/catalog/catalog-bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   text-align: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+      url("../../img/catalog/catalog-bg-mobile@2x.png");
+  }
 
   @media (min-width: $tablet) {
     min-height: 200px;
     margin: 0 30px;
     padding: 71px 125px 69px 54%;
+    background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+      url("../../img/catalog/catalog-bg-tablet.png");
+    background-size: cover;
     text-align: left;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+        url("../../img/catalog/catalog-bg-tablet@2x.png");
+    }
   }
 
   @media (min-width: $desktop) {
@@ -132,6 +152,14 @@
     padding: 185px 42px 43px;
     min-width: 245px;
     min-height: 288px;
+    background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+      url("../../img/catalog/catalog-bg-mobile.png");
+    background-position: right;
     text-align: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+        url("../../img/catalog/catalog-bg-mobile@2x.png");
+    }
   }
 }
