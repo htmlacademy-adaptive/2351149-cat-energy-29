@@ -265,8 +265,8 @@
 }
 
 .outcome__range:active + .outcome__button-line::after {
-  color: deepskyblue;
-  background: white;
+  color: var(--border-muddy);
+  background: var(--bg-lightest);
 }
 
 .outcome__image-before,
