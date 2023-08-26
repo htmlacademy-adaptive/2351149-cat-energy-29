@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Cat energy</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="icon" href="img/favicons/favicon-152.svg" type="image/svg+xml">
+    <link rel="manifest" href="../manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
@@ -41,9 +42,9 @@
         <p class="hero__text">Занялся собой? Займись котом!</p>
         <div class="hero__cat-food--wrapper">
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/index/hero-desktop.png 1x, img/index/hero-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/index/hero-tablet.png 1x, img/index/hero-tablet@2x.png 2x">
-            <img class="hero__cat-food" src="img/index/hero-mobile.png 1x" srcset="img/index/hero-mobile@2x.png 2x" width="280" height="270" alt="Cat Energy PRO со вкусом курицы.">
+            <source media="(min-width: 1440px)" srcset="img/index/hero-desktop.png, img/index/hero-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index/hero-tablet.png, img/index/hero-tablet@2x.png 2x">
+            <img class="hero__cat-food" src="img/index/hero-mobile.png" srcset="img/index/hero-mobile@2x.png 2x" width="280" height="270" alt="Cat Energy PRO со вкусом курицы.">
           </picture>
         </div>
         <a class="hero__link button" href="form.html">Подобрать программу</a>
@@ -92,12 +93,22 @@
           </dl>
         </div>
         <div class="outcome__compare">
-          <img class="outcome__image-before" src="img/index/fat-cat.png" width="560" height="512" alt="Толстая кошка.">
-          <img class="outcome__image-after" src="img/index/tall-cat.png" width="560" height="512" alt="Худая кошка.">
-          <button class="outcome__slider" type="button">
-            <span class="visually-hidden">Ползунок сравнения картинок</span>
-          </button>
+          <div class="outcome__slide outcome__slide--before">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/index/fat-cat-tablet.png, img/index/fat-cat-tablet@2x.png 2x">
+              <img class="outcome__image-before" src="img/index/fat-cat-mobile.png" srcset="img/index/fat-cat-mobile@2x.png 2x" width="280" height="256" alt="Толстая кошка.">
+            </picture>
+          </div>
+          <div class="outcome__slide outcome__slide--after">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/index/tall-cat-tablet.png, img/index/tall-cat-tablet@2x.png 2x">
+              <img class="outcome__image-after" src="img/index/tall-cat-mobile.png" srcset="img/index/tall-cat-mobile@2x.png 2x" width="280" height="256" alt="Худая кошка.">
+            </picture>
+          </div>
+          <input class="outcome__range" type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown">
+          <div class="outcome__button-line" aria-hidden="true"></div>
         </div>
+        <!-- <output>50%</output> -->
       </section>
     </main>
     <footer class="page__footer">
@@ -133,6 +144,7 @@
         </a>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>

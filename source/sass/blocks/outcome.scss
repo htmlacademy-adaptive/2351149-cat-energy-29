@@ -7,6 +7,7 @@
   @media (min-width: $tablet) {
     background: none;
     padding-block: 45px 101px;
+    background: linear-gradient(to top, var(--bg-dark) 0 462px, var(--bg-lightest) 462px 100%);
   }
 
   @media (min-width: $desktop) {
@@ -193,7 +194,88 @@
     font-size: 20px;
   }
 }
+//slider
+.outcome__compare {
+  display: grid;
+  grid-template-columns: var(--persent, 50%) 1fr;
+  width: 280px;
+  margin: 50px auto;
 
+  @media (min-width: $tablet) {
+    width: 560px;
+  }
+}
+
+.outcome__slide {
+  grid-row: 1/2;
+  display: flex;
+  overflow: hidden;
+}
+
+.outcome__slide--before {
+  grid-column: 1/2;
+}
+
+.outcome__slide--after {
+  grid-column: 2/3;
+  justify-content: flex-end;
+  // filter: grayscale(1);
+  // z-index: -1;
+  /*нужен только из-за filter*/
+}
+
+.outcome__range {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  // background: F005;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+}
+
+.outcome__button-line {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4px;
+  transform: translateX(50%);
+  background: var(--border-muddy);
+  pointer-events: none;
+  border-radius: 2px;
+}
+
+.outcome__button-line::after {
+  content: "❮ ❯";
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-muddy);
+  border-radius: 50%;
+  box-sizing: border-box;
+  line-height: 1;
+  font-size: 20px;
+  color: var(--border-muddy);
+  background: var(--bg-lightest);
+}
+
+.outcome__range:active + .outcome__button-line::after {
+  color: deepskyblue;
+  background: white;
+}
+
+.outcome__image-before,
 .outcome__image-after {
-  display: none;
+  width: 280px;
+  height: 256px;
+
+  @media (min-width: $tablet) {
+    width: 560px;
+    height: 512px;
+  }
 }
