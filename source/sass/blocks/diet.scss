@@ -9,8 +9,7 @@
 
 .diet__list {
   @include reset-list;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 20px;
 
   @media (min-width: $tablet) {
@@ -18,7 +17,7 @@
   }
 
   @media (min-width: $desktop) {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
     gap: 80px;
   }
 }
