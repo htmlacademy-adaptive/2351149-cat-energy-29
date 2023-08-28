@@ -86,7 +86,7 @@
 .diet__item:first-child::after {
   width: 36px;
   height: 50px;
-  background-image: url(../../img/index/sitting-cat.svg);
+  background-image: url(../img/index/sitting-cat.svg);
   transform: translate(12%, -8%);
 
   @media (min-width: $tablet) {
@@ -103,7 +103,7 @@
 .diet__item:last-child::after {
   width: 67px;
   height: 28px;
-  background-image: url(../../img/index/walking-cat.svg);
+  background-image: url(../img/index/walking-cat.svg);
   transform: translate(-12%, 33%);
 
   @media (min-width: $tablet) {
@@ -180,7 +180,7 @@
     width: 22px;
     height: 10px;
     margin-left: auto;
-    background-image: url("../../img/index/arrow.svg");
+    background-image: url("../img/index/arrow.svg");
     background-repeat: no-repeat;
     background-position: right;
 }

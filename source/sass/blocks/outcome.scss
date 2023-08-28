@@ -219,15 +219,11 @@
 .outcome__slide--after {
   grid-column: 2/3;
   justify-content: flex-end;
-  // filter: grayscale(1);
-  // z-index: -1;
-  /*нужен только из-за filter*/
 }
 
 .outcome__range {
   grid-column: 1/-1;
   grid-row: 1/2;
-  // background: F005;
   height: 100%;
   margin: 0;
   opacity: 0;
