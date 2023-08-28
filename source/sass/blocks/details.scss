@@ -44,7 +44,6 @@
 }
 
 .details__item {
-  position: relative;
   display: flex;
   align-items: center;
   font-family: $minor;
@@ -82,7 +81,6 @@
 
     @media (min-width: $tablet) {
       display: grid;
-      position: relative;
       width: 80px;
       height: 80px;
     }
@@ -95,7 +93,7 @@
       margin-left: auto;
       position: relative;
       z-index: -1;
-      top: -120px;
+      transform: translate(-9px, -127px);
       font-family: $major;
       font-size: 280px;
       color: var(--color-counter);
@@ -104,17 +102,17 @@
 }
 
 .details__item:nth-child(1)::before {
-  background-image: url(../img/index/leaf.svg);
+  background-image: url("../img/index/leaf.svg");
 }
 
 .details__item:nth-child(2)::before {
-  background-image: url(../img/index/water.svg);
+  background-image: url("../img/index/water.svg");
 }
 
 .details__item:nth-child(3)::before {
-  background-image: url(../img/index/fork-knife.svg);
+  background-image: url("../img/index/fork-knife.svg");
 }
 
 .details__item:nth-child(4)::before {
-  background-image: url(../img/index/clock.svg);
+  background-image: url("../img/index/clock.svg");
 }

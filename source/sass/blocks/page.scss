@@ -49,9 +49,27 @@
 .page__map {
   display: block;
   width: 100%;
+  background-image: url("../img/map-mobile.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-mobile@2x.png");
+  }
 
   @media (min-width: $tablet) {
     height: 400px;
+    background-image: url("../img/map-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $desktop) {
+    background-image: url("../img/map-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-desktop@2x.png");
+    }
   }
 }
 

@@ -115,7 +115,7 @@
   display: block;
   min-height: 290px;
   margin: 35px 20px 0;
-  padding: 187px 68px 43px;
+  padding: 59px 59px 43px;
   font-family: $minor;
   font-size: 16px;
   line-height: 20px;
@@ -133,9 +133,11 @@
   }
 
   @media (min-width: $tablet) {
+    display: grid;
+    gap: 264px;
     min-height: 200px;
     margin: 0 30px;
-    padding: 71px 125px 69px 54%;
+    padding: 71px 125px 69px 77px;
     background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
       url("../img/catalog/catalog-bg-tablet.png");
     background-size: cover;
@@ -148,8 +150,9 @@
   }
 
   @media (min-width: $desktop) {
+    display: block;
     margin: 0 110px 0 0;
-    padding: 185px 42px 43px;
+    padding: 56px 42px 43px;
     min-width: 245px;
     min-height: 288px;
     background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
@@ -164,10 +167,29 @@
   }
 }
 
-.catalog__promotion--extra-text::before {
+.catalog__promotion--extra::before {
   content: "";
   display: block;
   width: 78px;
   height: 80px;
-  background-image: url(../img/catalog/gift.svg);
+  margin: 0 auto 48px;
+  background-image: url("../img/catalog/gift.svg");
+
+  @media (min-width: $tablet) {
+    grid-area: 1/1/2/2;
+    width: 80px;
+    height: 83px;
+    margin: auto;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 auto 46px;
+  }
+}
+
+.catalog__promotion--extra-text {
+  @media (min-width: $tablet) {
+    grid-area: 1/2/2/3;
+    align-self: center;
+  }
 }

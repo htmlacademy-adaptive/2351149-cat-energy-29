@@ -37,7 +37,7 @@
 
   @media (min-width: $desktop) {
     grid-template-columns: min-content 1fr;
-    min-width: 570px;
+    width: 100%;
     flex-grow: 1;
     padding: 47px 61px 59px 52px;
   }
@@ -86,7 +86,7 @@
 .diet__item:first-child::after {
   width: 36px;
   height: 50px;
-  background-image: url(../img/index/sitting-cat.svg);
+  background-image: url("../img/index/sitting-cat.svg");
   transform: translate(12%, -8%);
 
   @media (min-width: $tablet) {
@@ -103,7 +103,7 @@
 .diet__item:last-child::after {
   width: 67px;
   height: 28px;
-  background-image: url(../img/index/walking-cat.svg);
+  background-image: url("../img/index/walking-cat.svg");
   transform: translate(-12%, 33%);
 
   @media (min-width: $tablet) {
@@ -183,7 +183,7 @@
     background-image: url("../img/index/arrow.svg");
     background-repeat: no-repeat;
     background-position: right;
-}
+  }
 
   @media (min-width: $tablet) {
     width: 165px;
