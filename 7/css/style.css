@@ -1930,11 +1930,6 @@ a {
     top: 24px;
   }
 }
-@media (min-width: 1440px) {
-  .line {
-    grid-area: a;
-  }
-}
 
 .logo {
   position: relative;
