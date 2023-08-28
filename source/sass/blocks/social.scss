@@ -1,18 +1,41 @@
 @use "common/mixins" as *;
 @use "common/variables" as *;
 
+.social {
+  border-bottom: 1px solid var(--border-light);
+  border-top: 1px solid var(--border-light);
+
+  @media (min-width: $tablet) {
+    margin: auto;
+    border-bottom: none;
+    border-top: none;
+  }
+}
+
 .social__list {
   @include reset-list;
+
+  display: flex;
+  justify-content: space-between;
+  width: 132px;
+  height: 22px;
+  margin: 20px auto;
 }
 
-.social__link--vkontakte {
-  background-image: url("../../img/vkontakte.svg");
+.social__link {
+  display: block;
+  width: 28px;
+  height: 22px;
 }
 
-.social__link--youtube {
-  background-image: url("../../img/youtube.svg");
-}
+// .social__link--vkontakte {
 
-.social__link--telegram {
-  background-image: url("../../img/telegram.svg");
-}
+// }
+
+// .social__link--youtube {
+
+// }
+
+// .social__link--telegram {
+
+// }

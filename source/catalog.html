@@ -174,7 +174,7 @@
           </li>
         </ul>
       </section>
-      <section class="catalog--extra page__line">
+      <section class="catalog--extra line">
         <h2 class="catalog__title--extra">Дополнительные товары</h2>
         <ul class="catalog__list--extra page__wrapper">
           <li class="card-narrow">
@@ -210,7 +210,9 @@
             <button class="button card__button" type="button">Заказать</button>
           </li>
         </ul>
-        <a class="catalog__promotion--extra page__wrapper" href="#">Закажите все и получите чехол для кота в подарок!</a>
+        <a class="catalog__promotion--extra page__wrapper" href="#">
+          <span class="catalog__promotion--extra-text">Закажите все и получите чехол для кота в подарок!</span>
+        </a>
       </section>
     </main>
     <footer class="page__footer">
@@ -219,30 +221,40 @@
         <address class="banner__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
       <iframe class="page__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3015234812012!2d30.32205184444558!3d59.93872876502746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1692468660881!5m2!1sru!2sby" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div class="footer-container">
-        <img class="logo--text-bottom" src="img/logo-text.png" width="128" height="24" alt="Текстовая версия логотипа cat energy.">
+      <div class="page__footer--container page__wrapper">
+        <img class="logo--text-bottom" src="img/logo-text.svg" width="128" height="24" alt="Текстовая версия логотипа cat energy.">
         <section class="social">
           <h2 class="visually-hidden">Соцсети</h2>
           <ul class="social__list">
             <li>
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">Вконтакте</span>
+              <a class="social__link" href="https://vk.com/htmlacademy">
+                <svg class="social__link--vkontakte" width="28" height="22">
+                  <use xlink:href="img/sprite.svg#social-vkontakte"></use>
+                </svg>
               </a>
             </li>
             <li>
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-                <span class="visually-hidden">Ютуб</span>
+              <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
+                <svg class="social__link--youtube" width="28" height="22">
+                  <use xlink:href="img/sprite.svg#social-youtube"></use>
+                </svg>
               </a>
             </li>
             <li>
-              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-                <span class="visually-hidden">Телеграм</span>
+              <a class="social__link" href="https://t.me/htmlacademy">
+                <svg class="social__link--telegram" width="28" height="22">
+                  <use xlink:href="img/sprite.svg#social-telegram"></use>
+                </svg>
               </a>
             </li>
           </ul>
         </section>
-        <a class="logo--academy" href="https://htmlacademy.ru/">
-          <span class="visually-hidden">Переход на сайт htmlacademy.ru</span>
+        <a class="logo__link" href="https://htmlacademy.ru/">
+          <span class="logo__academy--up">html</span>
+          <span class="logo__academy--low">academy</span>
+          <svg class="logo__academy" width="27" height="34">
+            <use xlink:href="img/sprite.svg#htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </footer>

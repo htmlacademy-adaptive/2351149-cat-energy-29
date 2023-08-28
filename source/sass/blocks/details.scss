@@ -39,7 +39,6 @@
   }
 
   @media (min-width: $desktop) {
-    grid-template-columns: repeat(auto-fit, minmax(246px, 1fr));
     gap: 37px 95px;
   }
 }
@@ -65,7 +64,7 @@
 
   @media (min-width: $desktop) {
 
-    min-width: 246px;
+    min-width: 230px;
     gap: 31px;
     padding: 0 0 57px;
   }
@@ -78,6 +77,8 @@
     height: 60px;
     margin-right: 20px;
     background-color: var(--bg-bright);
+    background-repeat: no-repeat;
+    background-position: center;
 
     @media (min-width: $tablet) {
       display: grid;
@@ -100,4 +101,20 @@
       color: var(--color-counter);
     }
   }
+}
+
+.details__item:nth-child(1)::before {
+  background-image: url(../../img/index/leaf.svg);
+}
+
+.details__item:nth-child(2)::before {
+  background-image: url(../../img/index/water.svg);
+}
+
+.details__item:nth-child(3)::before {
+  background-image: url(../../img/index/fork-knife.svg);
+}
+
+.details__item:nth-child(4)::before {
+  background-image: url(../../img/index/clock.svg);
 }

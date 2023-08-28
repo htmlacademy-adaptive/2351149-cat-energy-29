@@ -163,3 +163,11 @@
     }
   }
 }
+
+.catalog__promotion--extra-text::before {
+  content: "";
+  display: block;
+  width: 78px;
+  height: 80px;
+  background-image: url(../../img/catalog/gift.svg);
+}
