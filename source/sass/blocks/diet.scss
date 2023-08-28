@@ -9,8 +9,7 @@
 
 .diet__list {
   @include reset-list;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 20px;
 
   @media (min-width: $tablet) {
@@ -18,7 +17,7 @@
   }
 
   @media (min-width: $desktop) {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
     gap: 80px;
   }
 }
@@ -37,7 +36,7 @@
 
   @media (min-width: $desktop) {
     grid-template-columns: min-content 1fr;
-    min-width: 570px;
+    width: 100%;
     flex-grow: 1;
     padding: 47px 61px 59px 52px;
   }
@@ -62,6 +61,58 @@
       width: 100px;
       height: 100px;
     }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    grid-area: 1/1/2/2;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet) {
+      grid-area: 1/2/4/3;
+      background-size: cover;
+    }
+
+    @media (min-width: $desktop) {
+      grid-area: 1/1/2/2;
+    }
+  }
+}
+
+.diet__item:first-child::after {
+  width: 36px;
+  height: 50px;
+  background-image: url("../img/index/sitting-cat.svg");
+  transform: translate(12%, -8%);
+
+  @media (min-width: $tablet) {
+    width: 140px;
+    height: 194px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 70px;
+    height: 97px;
+  }
+}
+
+.diet__item:last-child::after {
+  width: 67px;
+  height: 28px;
+  background-image: url("../img/index/walking-cat.svg");
+  transform: translate(-12%, 33%);
+
+  @media (min-width: $tablet) {
+    width: 268px;
+    height: 112px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 134px;
+    height: 56px;
   }
 }
 
@@ -122,10 +173,21 @@
   border: none;
   cursor: pointer;
 
+  &::after {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 10px;
+    margin-left: auto;
+    background-image: url("../img/index/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
   @media (min-width: $tablet) {
     width: 165px;
     min-height: 38px;
-    grid-area: 3/1/4/2;
+    grid-area: 3/1/4/3;
     font-size: 20px;
     line-height: 20px;
     color: var(--color-common);
