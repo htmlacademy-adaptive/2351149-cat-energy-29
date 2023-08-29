@@ -70,6 +70,17 @@
   }
 }
 
+.logo__academy {
+  width: 27px;
+  height: 34px;
+  mask-image: url("../img/stack.svg#htmlacademy");
+  background-color: var(--bg-casual);
+
+  &:hover {
+    background-color: var(--bg-bright);
+  }
+}
+
 .logo__academy--up {
   text-transform: uppercase;
 }
