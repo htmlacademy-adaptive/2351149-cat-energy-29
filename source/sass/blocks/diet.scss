@@ -178,10 +178,19 @@
     display: block;
     width: 22px;
     height: 10px;
-    margin-left: auto;
+    margin: auto 10px auto auto;
     background-image: url("../img/index/arrow.svg");
     background-repeat: no-repeat;
     background-position: right;
+  }
+
+  &:hover::after {
+    width: 32px;
+    margin: auto 0 auto auto;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet) {

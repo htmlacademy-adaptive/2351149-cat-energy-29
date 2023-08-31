@@ -8,4 +8,13 @@
   border: none;
   color: var(--color-main);
   background-color: var(--bg-bright);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--bg-bright-dark);
+  }
+
+  &:active {
+    color: var(--color-main-pale);
+  }
 }

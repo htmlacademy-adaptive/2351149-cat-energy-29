@@ -18,6 +18,14 @@
     width: 202px;
     min-height: 170px;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .logo--icon {
@@ -48,10 +56,22 @@
 }
 
 .logo--text-bottom {
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.logo__link--bottom {
+  display: block;
   margin: 40px auto 20px;
 
   @media (min-width: $tablet) {
-    margin: 0;
+    margin: auto 0;
   }
 }
 
@@ -68,6 +88,10 @@
   @media (min-width: $tablet) {
     margin: auto 0;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .logo__academy {
@@ -75,10 +99,10 @@
   height: 34px;
   mask-image: url("../img/stack.svg#htmlacademy");
   background-color: var(--bg-casual);
+}
 
-  &:hover {
+.logo__link:hover .logo__academy {
     background-color: var(--bg-bright);
-  }
 }
 
 .logo__academy--up {

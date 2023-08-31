@@ -29,8 +29,13 @@
   mask-image: url("../img/stack.svg#vkontakte");
   background-color: var(--bg-muddy);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--bg-bright);
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -41,8 +46,13 @@
   mask-image: url("../img/stack.svg#youtube");
   background-color: var(--bg-muddy);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--bg-bright);
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -53,7 +63,12 @@
   mask-image: url("../img/stack.svg#telegram");
   background-color: var(--bg-muddy);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--bg-bright);
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

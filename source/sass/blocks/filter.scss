@@ -138,6 +138,10 @@
   }
 }
 
+.filter__characteristic--input:focus {
+  outline: 2px solid var(--border-casual);
+}
+
 .filter__fieldset--radio {
   margin: 0 0 26px;
   padding: 0 0 19px;
@@ -178,9 +182,14 @@
 .filter__radio {
   position: relative;
   padding-left: 45px;
+  cursor: pointer;
 
   @media (min-width: $tablet) {
     padding-left: 65px;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }
 
@@ -199,6 +208,14 @@
     width: 40px;
     height: 40px;
   }
+}
+
+.filter__radio:hover .filter__radio--backup {
+  border: 1px solid var(--border-cloudy);
+}
+
+.filter__radio--invis:focus + .filter__radio--backup {
+  border: 1px solid var(--border-bright);
 }
 
 .filter__radio--invis[type="radio"]:checked + .filter__radio--backup::before {
@@ -303,24 +320,28 @@
 }
 
 .filter__contacts {
-  display: flex;
+  display: grid;
+  grid-template-columns: min-content 1fr;
   gap: 13px;
   margin: 0 20px 14px;
 
   @media (min-width: $tablet) {
     margin: 0 70px 20px;
   }
-
-  @media (min-width: $desktop) {
-    display: inline-flex;
-  }
 }
 
-.filter__contacts--email {
+.filter__contacts:hover .filter__contacts--input {
+  border: 1px solid var(--border-mega-light);
+}
+
+.filter__contacts--email,
+.filter__contacts--phone {
+  grid-area: 1/1/2/2;
   white-space: nowrap;
 }
 
 .filter__contacts--input {
+  grid-area: 1/2/2/3;
   font-size: 16px;
   line-height: 18px;
   color: var(--color-casual);
@@ -330,6 +351,42 @@
     font-size: 20px;
     line-height: normal;
   }
+}
+
+.filter__contacts--input:focus {
+  outline: 2px solid var(--border-casual);
+}
+
+.filter__contacts--input-email::after,
+.filter__contacts--input-phone::after {
+  content: "";
+  grid-area: 1/2/2/3;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: auto 12px auto auto;
+  background-repeat: no-repeat;
+  background-color: var(--bg-black-lightest);
+
+  @media (min-width: $tablet) {
+    margin: auto 14px auto auto;
+  }
+
+  @media (min-width: $desktop) {
+    margin: auto 16px auto auto;
+  }
+}
+
+.filter__contacts--input:focus + .filter__contacts--input-email::after {
+  background-color: aqua;
+}
+
+.filter__contacts--input-email::after {
+  mask-image: url("../img/stack.svg#email");
+}
+
+.filter__contacts--input-phone::after {
+  mask-image: url("../img/stack.svg#phone");
 }
 
 .filter__fieldset--comments {
@@ -372,6 +429,10 @@
   color: var(--color-casual);
   text-transform: uppercase;
   border: 1px solid var(--border-ultra-light);
+
+  &:focus {
+    outline: 2px solid var(--border-casual);
+  }
 
   @media (min-width: $tablet) {
     width: calc(100% - 140px);
@@ -442,6 +503,10 @@
   @media (min-width: $tablet) {
     padding-left: 60px;
   }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 .filter__checkbox--backup {
@@ -460,6 +525,14 @@
     height: 40px;
     padding: 7px;
   }
+}
+
+.filter__checkbox:hover .filter__checkbox--backup {
+  border: 1px solid var(--border-cloudy);
+}
+
+.filter__checkbox--invis:focus + .filter__checkbox--backup {
+  border: 1px solid var(--border-bright);
 }
 
 .filter__checkbox--invis[type="checkbox"]:checked + .filter__checkbox--backup path {

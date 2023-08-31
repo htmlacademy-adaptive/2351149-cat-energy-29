@@ -92,11 +92,11 @@
           </fieldset>
           <fieldset class="filter__fieldset--contacts line">
             <legend class="filter__subtitle--contacts">Контактные данные (владельца кота)</legend>
-            <label class="filter__contacts">
+            <label class="filter__contacts filter__contacts--input-email">
               <span class="filter__contacts--email">E-mail:*</span>
               <input class="filter__contacts--input" type="text" name="e-mail" placeholder="кuklachev@gmail.com" maxlength="100" required>
             </label>
-            <label class="filter__contacts">
+            <label class="filter__contacts filter__contacts--input-phone">
               <span class="filter__contacts--phone">Телефон:*</span>
               <input class="filter__contacts--input" type="number" name="phone" placeholder="8 (960) 900-60-90" required>
             </label>
@@ -168,7 +168,9 @@
       </div>
       <iframe class="page__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3015234812012!2d30.32205184444558!3d59.93872876502746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1692468660881!5m2!1sru!2sby" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="page__footer--container page__wrapper">
-        <img class="logo--text-bottom" src="img/logo-text.svg" width="128" height="24" alt="Текстовая версия логотипа cat energy.">
+        <a href="index.html" class="logo__link--bottom">
+          <img class="logo--text-bottom" src="img/logo-text.svg" width="128" height="24" alt="Текстовая версия логотипа cat energy.">
+        </a>
         <section class="social">
           <h2 class="visually-hidden">Соцсети</h2>
           <ul class="social__list">
@@ -184,7 +186,7 @@
           </ul>
         </section>
         <a class="logo__link" href="https://htmlacademy.ru/">
-          <span class="logo__academy--up">html</span>
+          <span class="logo__academy--up">html&nbsp;</span>
           <span class="logo__academy--low">academy</span>
           <span class="logo__academy"></span>
         </a>
