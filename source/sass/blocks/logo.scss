@@ -53,6 +53,11 @@
     position: static;
     transform: none;
   }
+
+  @media (min-width: $desktop) {
+    width: 118px;
+    height: 21px;
+  }
 }
 
 .logo--text-bottom {
@@ -68,10 +73,10 @@
 
 .logo__link--bottom {
   display: block;
-  margin: 40px auto 20px;
+  margin: 40px auto 13px;
 
   @media (min-width: $tablet) {
-    margin: auto 0;
+    margin: auto 36px auto 0;
   }
 }
 

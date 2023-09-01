@@ -2,11 +2,12 @@
 
 .banner {
   display: flex;
+  gap: 16px;
   padding-block: 26px;
+  justify-content: space-between;
 
   @media (min-width: $tablet) {
     padding: 60px 70px;
-    justify-content: space-between;
   }
 
   @media (min-width: $desktop) {
@@ -15,6 +16,7 @@
     left: 110px;
     width: 565px;
     min-height: 199px;
+    padding: 58px 78px;
     background-color: var(--bg-lightest);
   }
 }
@@ -47,10 +49,17 @@
   font-style: normal;
 
   @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     font-size: 16px;
     line-height: 20px;
     width: 157px;
     min-height: 80px;
     text-align: right;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: left;
   }
 }

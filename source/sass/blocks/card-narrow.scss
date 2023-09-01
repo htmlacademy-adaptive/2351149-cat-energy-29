@@ -2,7 +2,7 @@
 @use "common/mixins" as *;
 
 .card-narrow {
-  padding-block: 13px 19px;
+  padding-block: 13px 18px;
   border-bottom: 1px solid var(--border-mega-light);
 
   &:first-child {
@@ -51,11 +51,12 @@
   justify-content: space-between;
 
   @media (min-width: $tablet) {
-    margin: 0;
+    align-items: center;
+    margin: 0 0 18px;
   }
 
-  @media (min-width: $tablet) {
-    align-items: center;
+  @media (min-width: $desktop) {
+    margin: auto 0;
   }
 }
 
@@ -66,8 +67,13 @@
   color: var(--color-casual);
 
   @media (min-width: $tablet) {
+    margin: 0 57px 0 auto;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
   }
 }
 
@@ -85,6 +91,12 @@
 
   @media (min-width: $desktop) {
     margin: 0 40px;
+  }
+}
+
+.card-narrow:nth-child(2) .card-narrow__price {
+  @media (min-width: $desktop) {
+    margin: 0 50px;
   }
 }
 

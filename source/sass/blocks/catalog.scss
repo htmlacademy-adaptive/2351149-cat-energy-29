@@ -21,7 +21,7 @@
   padding-block: 0 35px;
 
   @media (min-width: $tablet) {
-    padding-block: 0 70px;
+    padding-block: 0 75px;
   }
 
   @media (min-width: $desktop) {
@@ -36,7 +36,7 @@
 
 .catalog__title {
   margin: 0;
-  padding: 0 20px 41px;
+  padding: 0 20px 43px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -58,7 +58,7 @@
   z-index: 1;
   display: inline-flex;
   width: fit-content;
-  margin: 0 0 36px;
+  margin: 0 0 34px;
   padding: 0 20px 0;
   font-size: 24px;
   line-height: 24px;
@@ -89,7 +89,7 @@
   }
 
   @media (min-width: $desktop) {
-    gap: 80px;
+    gap: 63px 80px;
     padding: 0 110px;
     grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
   }
@@ -137,7 +137,7 @@
     gap: 264px;
     min-height: 200px;
     margin: 0 30px;
-    padding: 71px 125px 69px 77px;
+    padding: 62px 125px 58px 78px;
     background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
       url("../img/catalog/catalog-bg-tablet.png");
     background-size: cover;

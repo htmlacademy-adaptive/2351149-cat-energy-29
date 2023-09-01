@@ -6,7 +6,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 17px;
+    top: 14px;
     z-index: -1;
     display: block;
     width: 100%;
@@ -14,7 +14,7 @@
     background-color: var(--bg-bright);
 
     @media (min-width: $tablet) {
-      top: 24px;
+      top: 22px;
     }
   }
 }

@@ -15,6 +15,7 @@
   }
 
   @media (min-width: $tablet) {
+    padding-block: 40px 0;
     background: none;
     display: grid;
   }
@@ -51,7 +52,7 @@
 
   @media (min-width: $tablet) {
     grid-area: 1/1/2/2;
-    margin: 0 120px 40px;
+    margin: 0 90px 40px;
     font-size: 60px;
     line-height: 60px;
     color: var(--color-common);
@@ -74,7 +75,7 @@
 
   @media (min-width: $tablet) {
     grid-area: 2/1/3/2;
-    margin: 0 120px 50px;
+    margin: 0 90px 50px;
     font-size: 20px;
     line-height: 20px;
     color: var(--color-common);
@@ -82,13 +83,14 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 0 0 50px;
+    margin: 0 0 52px;
     padding: 0 110px 0 190px;
   }
 }
 
 .hero__link {
   width: 100%;
+  margin: 3px 0 0;
   font-size: 16px;
   line-height: 20px;
   color: var(--color-main);
@@ -98,9 +100,9 @@
     grid-area: 3/1/4/2;
     width: 244px;
     min-height: 54px;
-    margin: 0 120px;
-    font-size: 18px;
-    line-height: 24px;
+    margin: 0 90px;
+    font-size: 20px;
+    line-height: 26px;
     text-align: center;
   }
 
@@ -129,14 +131,14 @@
     grid-area: 2/1/5/2;
     width: 709px;
     height: 609px;
-    margin: 41px 0 0 5%;
+    margin: 41px 0 0;
   }
 
   @media (min-width: $desktop) {
     grid-area: 1/1/5/3;
     width: 552px;
     height: 499px;
-    margin: 143px 0 0 39%;
+    margin: 143px 0 0 38.7%;
     padding: 0;
   }
 }

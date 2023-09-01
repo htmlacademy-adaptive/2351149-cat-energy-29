@@ -32,6 +32,7 @@
   }
 
   @media (min-width: $desktop) {
+    width: 478px;
     background: none;
   }
 }
@@ -41,6 +42,7 @@
 
   @media (min-width: $tablet) {
     display: block;
+    margin: 10px 0 0;
   }
 }
 
@@ -94,8 +96,13 @@
     padding-block: 15px;
     font-size: 18px;
     line-height: 24px;
-    color: var(--color-common);
     border: none;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 20px;
+    line-height: normal;
+    color: var(--color-rare);
   }
 
   &:hover {
@@ -120,11 +127,15 @@
     width: 100%;
     box-shadow: 0 10px 0 1px var(--border-bright);
   }
+
+  @media (min-width: $desktop) {
+    box-shadow: 0 5px 0 1px var(--border-bright);
+  }
 }
 
 .header__link--current-light::after {
   @media (min-width: $desktop) {
-    box-shadow: 0 10px 0 1px var(--border-lightest);
+    box-shadow: 0 5px 0 1px var(--border-lightest);
   }
 }
 
@@ -146,8 +157,8 @@
 .header__navigation--closed + .header__toggle::before {
   content: "";
   position: absolute;
-  top: 12px;
-  left: 8px;
+  top: 9px;
+  left: 15px;
   width: 24px;
   height: 2px;
   background-color: var(--color-common);
