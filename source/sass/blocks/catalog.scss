@@ -120,16 +120,31 @@
   font-size: 16px;
   line-height: 20px;
   color: var(--color-main);
-  background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
-    url("../img/catalog/catalog-bg-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   text-align: center;
 
-  @media (min-resolution: 2dppx) {
+  .no-webp & {
     background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
-      url("../img/catalog/catalog-bg-mobile@2x.png");
+      url("../img/catalog/catalog-bg-mobile.png");
+  }
+
+  .webp & {
+    background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+      url("../img/catalog/catalog-bg-mobile.webp");
+  }
+
+  @media (min-resolution: 2dppx) {
+    .no-webp & {
+      background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+        url("../img/catalog/catalog-bg-mobile@2x.png");
+    }
+
+    .webp & {
+      background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+        url("../img/catalog/catalog-bg-mobile@2x.webp");
+    }
   }
 
   @media (min-width: $tablet) {
@@ -138,14 +153,30 @@
     min-height: 200px;
     margin: 0 30px;
     padding: 62px 125px 58px 78px;
-    background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
-      url("../img/catalog/catalog-bg-tablet.png");
     background-size: cover;
     text-align: left;
 
-    @media (min-resolution: 2dppx) {
+    .no-webp & {
       background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
-        url("../img/catalog/catalog-bg-tablet@2x.png");
+        url("../img/catalog/catalog-bg-tablet.png");
+    }
+
+    .webp & {
+      background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+        url("../img/catalog/catalog-bg-tablet.webp");
+    }
+
+
+    @media (min-resolution: 2dppx) {
+      .no-webp & {
+        background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+          url("../img/catalog/catalog-bg-tablet@2x.png");
+      }
+
+      .webp & {
+        background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+          url("../img/catalog/catalog-bg-tablet@2x.webp");
+      }
     }
   }
 
@@ -155,14 +186,29 @@
     padding: 56px 42px 43px;
     min-width: 245px;
     min-height: 288px;
-    background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
-      url("../img/catalog/catalog-bg-mobile.png");
     background-position: right;
     text-align: center;
 
-    @media (min-resolution: 2dppx) {
+    .no-webp & {
       background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
-        url("../img/catalog/catalog-bg-mobile@2x.png");
+        url("../img/catalog/catalog-bg-mobile.png");
+    }
+
+    .webp & {
+      background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+        url("../img/catalog/catalog-bg-mobile.webp");
+    }
+
+    @media (min-resolution: 2dppx) {
+      .no-webp & {
+        background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+          url("../img/catalog/catalog-bg-mobile@2x.png");
+      }
+
+      .webp & {
+        background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+          url("../img/catalog/catalog-bg-mobile@2x.webp");
+      }
     }
   }
 }
