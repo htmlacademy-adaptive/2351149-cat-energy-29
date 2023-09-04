@@ -22,6 +22,7 @@
   font-weight: 400;
 
   @media (min-width: $tablet) {
+    margin: 0 0 59px;
     font-size: 60px;
     line-height: 60px;
     color: var(--color-common);
@@ -33,13 +34,13 @@
 }
 
 .outcome__text {
-  margin: 0 0 35px;
+  margin: 0 0 34px;
   font-family: $minor;
   font-size: 14px;
   line-height: 18px;
 
   @media (min-width: $tablet) {
-    margin: 0 0 55px;
+    margin: 0 0 65px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -162,6 +163,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
+    margin: 0 0 11px;
     font-size: 20px;
   }
 
@@ -242,20 +244,16 @@
 }
 
 .outcome__button-line::after {
-  content: "❮ ❯";
+  content: "";
   flex-shrink: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 40px;
   height: 40px;
-  border: 3px solid var(--border-muddy);
-  border-radius: 50%;
-  box-sizing: border-box;
-  line-height: 1;
-  font-size: 20px;
-  color: var(--border-muddy);
-  background: var(--bg-lightest);
+  // border: 3px solid var(--border-muddy);
+  // border-radius: 50%;
+  // background: var(--bg-lightest);
+  mask-image: url("../img/stack.svg#slider");
+  background-color: rgb(96, 189, 189);
 }
 
 .outcome__range:active + .outcome__button-line::after {

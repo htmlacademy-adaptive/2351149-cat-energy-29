@@ -6,6 +6,7 @@
   border-top: 1px solid var(--border-light);
 
   @media (min-width: $tablet) {
+    padding-block: 40px 60px;
     border: none;
   }
 
@@ -69,6 +70,7 @@
   padding: 0 20px;
 
   @media (min-width: $tablet) {
+    gap: 20px;
     padding: 0 70px;
   }
 
@@ -79,8 +81,8 @@
 }
 
 .filter__fieldset--characteristic {
-  margin: 0 0 22px;
-  padding: 0 0 21px;
+  margin: 0 0 25px;
+  padding: 0 0 25px;
   border: none;
   border-bottom: 1px solid var(--border-light);
 
@@ -132,21 +134,35 @@
   border: 1px solid var(--border-ultra-light);
 
   @media (min-width: $tablet) {
+    padding: 0 20px;
     min-height: 52px;
     font-size: 20px;
     line-height: normal;
   }
 }
 
+.filter__characteristic--input:hover {
+  border: 1px solid var(--border-mega-light);
+}
+
+.filter__characteristic--input:focus {
+  outline: 2px solid var(--border-casual);
+}
+
+//add this class for error status
+.filter__error {
+  border: 2px solid var(--border-error);
+}
+
 .filter__fieldset--radio {
-  margin: 0 0 26px;
+  margin: 0 0 27px;
   padding: 0 0 19px;
   border: none;
   border-bottom: 1px solid var(--border-light);
 
   @media (min-width: $tablet) {
     grid-area: 2/1/3/3;
-    margin: 0 0 65px;
+    margin: 0 0 67px;
     padding: 0 70px;
     border: none;
   }
@@ -160,27 +176,32 @@
 
 .filter__list--radio {
   @include reset-list;
-  gap: 13px;
+  gap: 20px;
   padding: 0 20px;
   display: grid;
 
   @media (min-width: $tablet) {
-    gap: 23px;
-    padding: 23px 27px;
+    gap: 24px;
+    padding: 27px;
     border: 1px solid var(--border-ultra-light);
   }
 
   @media (min-width: $desktop) {
-    padding: 30px 28px;
+    padding: 28px;
   }
 }
 
 .filter__radio {
   position: relative;
   padding-left: 45px;
+  cursor: pointer;
 
   @media (min-width: $tablet) {
-    padding-left: 65px;
+    padding-left: 59px;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }
 
@@ -195,10 +216,18 @@
   background-color: var(--bg-lightest);
 
   @media (min-width: $tablet) {
-    top: -8px;
+    top: -10px;
     width: 40px;
     height: 40px;
   }
+}
+
+.filter__radio:hover .filter__radio--backup {
+  border: 1px solid var(--border-cloudy);
+}
+
+.filter__radio--invis:focus + .filter__radio--backup {
+  border: 1px solid var(--border-bright);
 }
 
 .filter__radio--invis[type="radio"]:checked + .filter__radio--backup::before {
@@ -233,13 +262,13 @@
 
 .filter__fieldset--contacts {
   display: grid;
-  margin: 0 0 24px;
+  margin: 0 0 10px;
   padding: 0;
   border: none;
 
   @media (min-width: $tablet) {
     grid-area: 3/1/4/3;
-    margin: 0 0 65px;
+    margin: 0 0 45px;
   }
 
   @media (min-width: $desktop) {
@@ -303,24 +332,29 @@
 }
 
 .filter__contacts {
-  display: flex;
+  position: relative;
+  display: grid;
+  grid-template-columns: min-content 1fr;
   gap: 13px;
   margin: 0 20px 14px;
 
   @media (min-width: $tablet) {
     margin: 0 70px 20px;
   }
-
-  @media (min-width: $desktop) {
-    display: inline-flex;
-  }
 }
 
-.filter__contacts--email {
+.filter__contacts:hover .filter__contacts--input {
+  border: 1px solid var(--border-mega-light);
+}
+
+.filter__contacts--email,
+.filter__contacts--phone {
+  grid-area: 1/1/2/2;
   white-space: nowrap;
 }
 
 .filter__contacts--input {
+  grid-area: 1/2/2/3;
   font-size: 16px;
   line-height: 18px;
   color: var(--color-casual);
@@ -332,14 +366,54 @@
   }
 }
 
+.filter__contacts--input:focus {
+  outline: 2px solid var(--border-casual);
+}
+
+.filter__contacts--input-email::after,
+.filter__contacts--input-phone::after {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-color: var(--bg-black-lightest);
+
+  @media (min-width: $tablet) {
+    top: 18px;
+    right: 14px;
+  }
+
+  @media (min-width: $desktop) {
+    top: 18px;
+    right: 16px;
+  }
+}
+
+.filter__contacts--input-email::after {
+  mask-image: url("../img/stack.svg#email");
+}
+
+.filter__contacts--input-phone::after {
+  mask-image: url("../img/stack.svg#phone");
+}
+
+.filter__contacts--input:focus + .filter__contacts--input-email::after,
+.filter__contacts--input:focus + .filter__contacts--input-phone::after {
+  background-color: var(--bg-bright);
+}
+
 .filter__fieldset--comments {
-  margin: 0 0 23px;
+  margin: 0 0 21px;
   padding: 0;
   border: none;
 
   @media (min-width: $tablet) {
     grid-area: 4/1/5/3;
-    margin: 0 0 65px;
+    margin: 0 0 6px;
   }
 
   @media (min-width: $desktop) {
@@ -365,13 +439,21 @@
   width: calc(100% - 40px);
   min-height: 150px;
   margin: 0 20px;
-  padding: 14px;
+  padding: 12px;
   font-family: inherit;
   font-size: 16px;
   line-height: 18px;
   color: var(--color-casual);
   text-transform: uppercase;
   border: 1px solid var(--border-ultra-light);
+
+  &:hover {
+    border: 1px solid var(--border-mega-light);
+  }
+
+  &:focus {
+    outline: 2px solid var(--border-casual);
+  }
 
   @media (min-width: $tablet) {
     width: calc(100% - 140px);
@@ -383,6 +465,8 @@
 
   @media (min-width: $desktop) {
     width: calc(100% - 220px);
+    height: 175px;
+    min-height: 175px;
     margin: 0 110px;
     padding: 9px 20px;
   }
@@ -405,7 +489,7 @@
 }
 
 .filter__subtitle--checkbox {
-  margin: 0 0 34px;
+  margin: 0 0 35px;
 
   @media (min-width: $tablet) {
     margin: 0 0 57px 30px;
@@ -419,19 +503,20 @@
 .filter__list--checkbox {
   @include reset-list;
   display: grid;
-  gap: 15px;
-  margin: 60px 0 0;
+  gap: 19px;
+  margin: 61px 0 0;
   padding: 0 20px;
 
   @media (min-width: $tablet) {
     grid-template-columns: 1fr 1fr;
-    gap: 37px 60px;
-    margin: 93px 0 0;
+    gap: 42px 60px;
+    margin: 98px 0 0;
     padding: 0 70px;
   }
 
   @media (min-width: $desktop) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0 90px 0 110px;
   }
 }
 
@@ -441,6 +526,10 @@
 
   @media (min-width: $tablet) {
     padding-left: 60px;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }
 
@@ -454,12 +543,20 @@
   border: 1px solid var(--border-mega-light);
 
   @media (min-width: $tablet) {
-    top: -8px;
+    top: -10px;
     left: 0;
     width: 40px;
     height: 40px;
     padding: 7px;
   }
+}
+
+.filter__checkbox:hover .filter__checkbox--backup {
+  border: 1px solid var(--border-cloudy);
+}
+
+.filter__checkbox--invis:focus + .filter__checkbox--backup {
+  border: 1px solid var(--border-bright);
 }
 
 .filter__checkbox--invis[type="checkbox"]:checked + .filter__checkbox--backup path {
@@ -482,6 +579,7 @@
   display: block;
   width: calc(100% - 40px);
   margin: 0 auto 21px;
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -489,11 +587,16 @@
   @media (min-width: $tablet) {
     grid-area: 6/1/7/2;
     width: calc(100% - 70px);
+    min-height: 54px;
     margin: 0 0 0 70px;
+    font-size: 20px;
+    line-height: 26px;
   }
 
   @media (min-width: $desktop) {
     grid-area: 5/1/6/2;
+    width: calc(100% - 110px);
+    margin: 0 0 0 110px;
   }
 }
 
@@ -507,7 +610,7 @@
   @media (min-width: $tablet) {
     grid-area: 6/2/7/3;
     min-width: 180px;
-    margin: 0;
+    margin: auto 0;
     font-size: 16px;
   }
 

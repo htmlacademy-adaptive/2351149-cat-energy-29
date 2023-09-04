@@ -1,9 +1,11 @@
 :root {
   --white: #ffffff;
+  --white-pale: rgba(255, 255, 255, 0.3);
   --black: #000000;
   --black-light: #111111;
   --black-lightest: #222222;
   --green: #68b738;
+  --green-dark: #5eaa2f;
   --green-opacity: rgba(104, 183, 56, 0.85);
   --grey-special: #444444;
   --grey-dark: #f2f2f2;
@@ -14,8 +16,11 @@
   --grey-super-light: #e6e6e6;
   --grey-ultra-light: #e7e7e7;
   --grey-muddy: #666666;
+  --grey-cloudy: #bababa;
+  --red-light: #ff8282;
   //
   --color-main: var(--white);
+  --color-main-pale: var(--white-pale);
   --color-common: var(--black);
   --color-casual: var(--grey-special);
   --color-rare: var(--black-light);
@@ -23,10 +28,17 @@
   --color-counter: var(--grey-dark);
   --color-bright: var(--green);
   --bg-lightest: var(--white);
+  --bg-black-lightest: var(--black-lightest);
   --bg-bright: var(--green);
+  --bg-bright-dark: var(--green-dark);
   --bg-cat: var(--green-opacity);
+  --bg-grey-lightest: var(--grey-lightest);
   --bg-dark: var(--grey-dark);
   --bg-darkest: var(--grey-darkest);
+  --bg-muddy: var(--grey-muddy);
+  --bg-casual: var(--grey-special);
+  --bg-error: var(--red-light);
+  --border-casual: var(--grey-special);
   --border-dark: var(--grey-dark);
   --border-bright: var(--green);
   --border-light: var(--grey-light);
@@ -35,4 +47,6 @@
   --border-super-light: var(--grey-super-light);
   --border-ultra-light: var(--grey-ultra-light);
   --border-muddy: var(--grey-muddy);
+  --border-cloudy: var(--grey-cloudy);
+  --border-error: var(--red-light);
 }

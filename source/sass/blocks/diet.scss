@@ -3,7 +3,7 @@
 
 .diet {
   @media (min-width: $desktop) {
-    padding-block: 82px 71px;
+    padding-block: 82px 67px;
   }
 }
 
@@ -25,11 +25,11 @@
 .diet__item {
   display: grid;
   grid-template-columns: min-content 1fr;
-  padding: 20px 20px 18px;
+  padding: 25px 20px 15px;
   background-color: var(--bg-dark);
 
   @media (min-width: $tablet) {
-    padding: 77px 63px 53px 52px;
+    padding: 77px 63px 50px 52px;
     grid-template-columns: 1fr 200px;
     column-gap: 53px;
   }
@@ -39,6 +39,7 @@
     width: 100%;
     flex-grow: 1;
     padding: 47px 61px 59px 52px;
+    column-gap: 26px;
   }
 
   &::before {
@@ -54,12 +55,14 @@
       grid-area: 1/2/4/3;
       width: 200px;
       height: 200px;
+      margin: 15px 0 0;
     }
 
     @media (min-width: $desktop) {
       grid-area: 1/1/2/2;
       width: 100px;
       height: 100px;
+      margin: 0;
     }
   }
 
@@ -91,11 +94,13 @@
   @media (min-width: $tablet) {
     width: 140px;
     height: 194px;
+    transform: translate(21%, 2%);
   }
 
   @media (min-width: $desktop) {
     width: 70px;
     height: 97px;
+    transform: translate(21%, -6%);
   }
 }
 
@@ -108,11 +113,13 @@
   @media (min-width: $tablet) {
     width: 268px;
     height: 112px;
+    transform: translate(-11%, 53%);
   }
 
   @media (min-width: $desktop) {
     width: 134px;
     height: 56px;
+    transform: translate(-13%, 35%);
   }
 }
 
@@ -136,10 +143,24 @@
   }
 }
 
+.diet__item:first-child .diet__title {
+  @media (min-width: $desktop) {
+    margin: auto 0 auto 36px;
+  }
+}
+
+.diet__item:last-child .diet__title {
+  margin: 5px 0 0 3px;
+
+  @media (min-width: $desktop) {
+    margin: auto 0;
+  }
+}
+
 .diet__text {
   grid-area: 2/1/3/3;
   margin: 0;
-  padding-block: 27px 22px;
+  padding-block: 23px 22px;
   font-family: $minor;
   font-size: 14px;
   line-height: 18px;
@@ -155,6 +176,7 @@
 
   @media (min-width: $desktop) {
     grid-area: 2/1/3/3;
+    padding-block: 39px 22px;
   }
 }
 
@@ -162,7 +184,7 @@
   display: inline-flex;
   grid-area: 3/1/4/3;
   width: 139px;
-  margin-top: 15px;
+  margin: 15px 0 0;
   min-height: 24px;
   font-size: 16px;
   line-height: 16px;
@@ -178,18 +200,32 @@
     display: block;
     width: 22px;
     height: 10px;
-    margin-left: auto;
+    margin: auto 15px auto auto;
     background-image: url("../img/index/arrow.svg");
     background-repeat: no-repeat;
     background-position: right;
+  }
+
+  &:hover::after {
+    width: 32px;
+    margin: auto 0 auto auto;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet) {
     width: 165px;
     min-height: 38px;
     grid-area: 3/1/4/3;
+    margin: 27px 0 0;
     font-size: 20px;
     line-height: 20px;
     color: var(--color-common);
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
   }
 }
