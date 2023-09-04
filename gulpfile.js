@@ -74,7 +74,7 @@ const svg = () =>
 
 const makeStack = () => {
   return gulp.src('source/img/icons/**/*.svg')
-    .pipe(stacksvg({output: 'sprite'}))
+    .pipe(stacksvg({output: 'stack'}))
     .pipe(gulp.dest('build/img'))
 }
 
@@ -147,7 +147,7 @@ export const build = gulp.series(
     html,
     scripts,
     svg,
-    sprite,
+    makeStack,
     createWebp
   ),
 );
@@ -163,7 +163,7 @@ export default gulp.series(
     html,
     scripts,
     svg,
-    sprite,
+    makeStack,
     createWebp
   ),
   gulp.series(
