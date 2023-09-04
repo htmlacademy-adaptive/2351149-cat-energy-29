@@ -78,16 +78,6 @@ const makeStack = () => {
     .pipe(gulp.dest('build/img'))
 }
 
-// const sprite = () => {
-// return gulp.src('source/img/icons/*.svg')
-// .pipe(svgo())
-// .pipe(svgstore({
-// inlineSvg: true
-// }))
-// .pipe(rename('sprite.svg'))
-// .pipe(gulp.dest('build/img'));
-// }
-
 // Copy
 
 export const copy = (done) => {
