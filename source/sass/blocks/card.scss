@@ -69,6 +69,10 @@
   margin: 3px auto 23px;
   display: block;
   grid-area: 1/1/2/3;
+  // width: 30px;
+  // height: 30px;
+  // mask-image: url("../img/stack.svg#plus");
+  // background-color: red;
 
   @media (min-width: $tablet) {
     width: 60px;
