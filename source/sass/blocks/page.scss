@@ -40,50 +40,67 @@
   }
 }
 
-.page__footer {
-  @media (min-width: $desktop) {
-    position: relative;
-  }
-}
-
 .page__map {
   display: block;
   width: 100%;
-  background-image: url("../img/map-mobile.png");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .no-webp & {
+    background-image: url("../img/map-mobile.png");
+  }
+
+  .webp & {
+    background-image: url("../img/map-mobile.webp");
+  }
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/map-mobile@2x.png");
+    .no-webp & {
+      background-image: url("../img/map-mobile@2x.png");
+    }
+
+    .webp & {
+      background-image: url("../img/map-mobile@2x.webp");
+    }
   }
 
   @media (min-width: $tablet) {
-    height: 400px;
-    background-image: url("../img/map-tablet.png");
+    .no-webp & {
+      background-image: url("../img/map-tablet.png");
+    }
+
+    .webp & {
+      background-image: url("../img/map-tablet.webp");
+    }
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/map-tablet@2x.png");
+      .no-webp & {
+        background-image: url("../img/map-tablet@2x.png");
+      }
+
+      .webp & {
+        background-image: url("../img/map-tablet@2x.webp");
+      }
     }
   }
 
   @media (min-width: $desktop) {
-    background-image: url("../img/map-desktop.png");
+    .no-webp & {
+      background-image: url("../img/map-desktop.png");
+    }
+
+    .webp & {
+      background-image: url("../img/map-desktop.webp");
+    }
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/map-desktop@2x.png");
+      .no-webp & {
+        background-image: url("../img/map-desktop@2x.png");
+      }
+
+      .webp & {
+        background-image: url("../img/map-desktop@2x.webp");
+      }
     }
-  }
-}
-
-.page__footer--container {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--bg-dark);
-
-  @media (min-width: $tablet) {
-    flex-direction: row;
-    min-height: 147px;
-  }
-
-  @media (min-width: $desktop) {
-    min-height: 169px;
   }
 }

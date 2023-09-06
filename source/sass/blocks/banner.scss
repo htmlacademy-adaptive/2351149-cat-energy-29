@@ -3,7 +3,7 @@
 .banner {
   display: flex;
   gap: 16px;
-  padding-block: 26px;
+  padding-block: 40px 26px;
   justify-content: space-between;
 
   @media (min-width: $tablet) {

@@ -1,0 +1,188 @@
+@use "common/mixins" as *;
+@use "common/variables" as *;
+
+.extra {
+  padding-block: 0 35px;
+
+  @media (min-width: $tablet) {
+    padding-block: 0 75px;
+  }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-areas:
+      "a a"
+      "b c";
+    padding-block: 0 87px;
+  }
+}
+
+.extra__title {
+  z-index: 1;
+  display: inline-flex;
+  width: fit-content;
+  margin: 0 0 34px;
+  padding: 0 20px 0;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  background-color: var(--bg-lightest);
+
+  @media (min-width: $tablet) {
+    margin: 0 0 80px 30px;
+    padding: 0 40px 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: a;
+    margin: 0 0 80px 70px;
+  }
+}
+
+.extra__list {
+  margin: 0;
+  list-style: none;
+
+  @media (min-width: $tablet) {
+    margin: 0 0 70px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: b;
+    min-width: 1005px;
+    margin: 0 81px 0 0;
+    padding-right: 0;
+  }
+}
+
+.extra__promotion {
+  display: block;
+  min-height: 290px;
+  margin: 35px 20px 0;
+  padding: 59px 59px 43px;
+  font-family: $minor;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-main);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+
+  .no-webp & {
+    background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+      url("../img/catalog/catalog-bg-mobile.png");
+  }
+
+  .webp & {
+    background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+      url("../img/catalog/catalog-bg-mobile.webp");
+  }
+
+  @media (min-resolution: 2dppx) {
+    .no-webp & {
+      background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+        url("../img/catalog/catalog-bg-mobile@2x.png");
+    }
+
+    .webp & {
+      background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+        url("../img/catalog/catalog-bg-mobile@2x.webp");
+    }
+  }
+
+  @media (min-width: $tablet) {
+    display: grid;
+    gap: 264px;
+    min-height: 200px;
+    margin: 0 30px;
+    padding: 62px 125px 58px 78px;
+    background-size: cover;
+    text-align: left;
+
+    .no-webp & {
+      background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+        url("../img/catalog/catalog-bg-tablet.png");
+    }
+
+    .webp & {
+      background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+        url("../img/catalog/catalog-bg-tablet.webp");
+    }
+
+
+    @media (min-resolution: 2dppx) {
+      .no-webp & {
+        background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+          url("../img/catalog/catalog-bg-tablet@2x.png");
+      }
+
+      .webp & {
+        background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+          url("../img/catalog/catalog-bg-tablet@2x.webp");
+      }
+    }
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+    margin: 0 110px 0 0;
+    padding: 56px 42px 43px;
+    min-width: 245px;
+    min-height: 288px;
+    background-position: right;
+    text-align: center;
+
+    .no-webp & {
+      background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+        url("../img/catalog/catalog-bg-mobile.png");
+    }
+
+    .webp & {
+      background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+        url("../img/catalog/catalog-bg-mobile.webp");
+    }
+
+    @media (min-resolution: 2dppx) {
+      .no-webp & {
+        background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+          url("../img/catalog/catalog-bg-mobile@2x.png");
+      }
+
+      .webp & {
+        background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+          url("../img/catalog/catalog-bg-mobile@2x.webp");
+      }
+    }
+  }
+}
+
+.extra__promotion::before {
+  content: "";
+  display: block;
+  width: 78px;
+  height: 80px;
+  margin: 0 auto 48px;
+  background-image: url("../img/catalog/gift.svg");
+
+  @media (min-width: $tablet) {
+    grid-area: 1/1/2/2;
+    width: 80px;
+    height: 83px;
+    margin: auto;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 auto 46px;
+  }
+}
+
+.extra__promotion-text {
+  @media (min-width: $tablet) {
+    grid-area: 1/2/2/3;
+    align-self: center;
+  }
+}
