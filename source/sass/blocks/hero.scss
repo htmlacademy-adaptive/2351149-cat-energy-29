@@ -3,15 +3,30 @@
 .hero {
   padding-block: 27px 20px;
   position: relative;
-  background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
-    url("../img/index/hero-bg-mobile.jpg");
   background-repeat: no-repeat;
   background-size: auto 302px;
   background-position: top;
 
-  @media (min-resolution: 2dppx) {
+  .no-webp & {
     background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
-      url("../img/index/hero-bg-mobile@2x.jpg");
+      url("../img/index/hero-bg-mobile.jpg");
+  }
+
+  .webp & {
+    background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+      url("../img/index/hero-bg-mobile.webp");
+  }
+
+  @media (min-resolution: 2dppx) {
+    .no-webp & {
+      background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+        url("../img/index/hero-bg-mobile@2x.jpg");
+    }
+
+    .webp & {
+      background-image: linear-gradient(to right, var(--bg-cat), var(--bg-cat)),
+        url("../img/index/hero-bg-mobile@2x.webp");
+    }
   }
 
   @media (min-width: $tablet) {
@@ -126,7 +141,7 @@
   }
 }
 
-.hero__cat-food--wrapper {
+.hero__cat-food-wrapper {
   @media (min-width: $tablet) {
     grid-area: 2/1/5/2;
     width: 709px;
