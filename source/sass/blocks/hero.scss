@@ -31,8 +31,15 @@
 
   @media (min-width: $tablet) {
     padding-block: 40px 0;
-    background: none;
     display: grid;
+
+    .no-webp & {
+      background: none;
+    }
+
+    .webp & {
+      background: none;
+    }
   }
 
   @media (min-width: $desktop) {
