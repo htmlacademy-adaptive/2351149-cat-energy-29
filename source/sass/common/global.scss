@@ -26,3 +26,8 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}

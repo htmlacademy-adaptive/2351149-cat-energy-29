@@ -1,5 +1,5 @@
-@use "common/mixins" as *;
-@use "common/variables" as *;
+@use "../common/mixins" as *;
+@use "../common/variables" as *;
 
 .diet {
   @media (min-width: $desktop) {
