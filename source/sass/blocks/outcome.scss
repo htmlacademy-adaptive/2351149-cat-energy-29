@@ -306,11 +306,6 @@
   }
 }
 
-.outcome__range:active + .outcome__button-line::after {
-  color: var(--border-muddy);
-  background: var(--bg-lightest);
-}
-
 .outcome__image-before,
 .outcome__image-after {
   width: 280px;
