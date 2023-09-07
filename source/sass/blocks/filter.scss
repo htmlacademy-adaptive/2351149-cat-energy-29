@@ -1,5 +1,5 @@
-@use "common/mixins" as *;
-@use "common/variables" as *;
+@use "../common/mixins" as *;
+@use "../common/variables" as *;
 
 .filter {
   padding-block: 27px 32px;
@@ -446,6 +446,7 @@
   color: var(--color-casual);
   text-transform: uppercase;
   border: 1px solid var(--border-ultra-light);
+  resize: vertical;
 
   &:hover {
     border: 1px solid var(--border-mega-light);

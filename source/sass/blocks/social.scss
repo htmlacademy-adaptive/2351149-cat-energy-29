@@ -1,5 +1,5 @@
-@use "common/mixins" as *;
-@use "common/variables" as *;
+@use "../common/mixins" as *;
+@use "../common/variables" as *;
 
 .social {
   border-bottom: 1px solid var(--border-light);
