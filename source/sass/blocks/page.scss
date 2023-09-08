@@ -41,66 +41,21 @@
 }
 
 .page__map {
+  display: grid;
+  background-color: var(--bg-dark);
+}
+
+.page__map-iframe {
   display: block;
   width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+  grid-area: 1/1/2/2;
+}
 
-  .no-webp & {
-    background-image: url("../img/map-mobile.png");
-  }
+.page__map-wrapper {
+  margin: 0 auto;
+  grid-area: 1/1/2/2;
+}
 
-  .webp & {
-    background-image: url("../img/map-mobile.webp");
-  }
-
-  @media (min-resolution: 2dppx) {
-    .no-webp & {
-      background-image: url("../img/map-mobile@2x.png");
-    }
-
-    .webp & {
-      background-image: url("../img/map-mobile@2x.webp");
-    }
-  }
-
-  @media (min-width: $tablet) {
-    .no-webp & {
-      background-image: url("../img/map-tablet.png");
-    }
-
-    .webp & {
-      background-image: url("../img/map-tablet.webp");
-    }
-
-    @media (min-resolution: 2dppx) {
-      .no-webp & {
-        background-image: url("../img/map-tablet@2x.png");
-      }
-
-      .webp & {
-        background-image: url("../img/map-tablet@2x.webp");
-      }
-    }
-  }
-
-  @media (min-width: $desktop) {
-    .no-webp & {
-      background-image: url("../img/map-desktop.png");
-    }
-
-    .webp & {
-      background-image: url("../img/map-desktop.webp");
-    }
-
-    @media (min-resolution: 2dppx) {
-      .no-webp & {
-        background-image: url("../img/map-desktop@2x.png");
-      }
-
-      .webp & {
-        background-image: url("../img/map-desktop@2x.webp");
-      }
-    }
-  }
+.page__map-image {
+  display: block;
 }
