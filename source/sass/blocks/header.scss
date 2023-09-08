@@ -52,10 +52,6 @@
 
 .header__navigation--nojs {
   display: contents;
-
-  @media (min-width: $tablet) {
-    display: flex;
-  }
 }
 
 .header__list {
