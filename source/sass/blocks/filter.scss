@@ -230,7 +230,7 @@
   border: 1px solid var(--border-bright);
 }
 
-.filter__radio-invis[type="radio"]:checked + .filter__radio-backup::before {
+.filter__radio-invis:checked + .filter__radio-backup::before {
   position: absolute;
   top: 7px;
   left: 7px;
@@ -246,6 +246,11 @@
     width: 18px;
     height: 18px;
   }
+}
+//
+.filter__radio-invis:disabled + .filter__radio-backup::before,
+.filter__radio-invis:disabled ~ .filter__radio-text {
+  opacity: 0.3;
 }
 
 .filter__radio-text {
@@ -273,7 +278,6 @@
 
   @media (min-width: $desktop) {
     grid-area: 2/1/3/3;
-    grid-template-columns: 1fr 1fr;
     gap: 0 80px;
     margin: 0 0 70px;
   }
@@ -282,20 +286,6 @@
 .filter__fieldset-contacts div {
   @media (min-width: $desktop) {
     grid-area: 1/1/2/3;
-  }
-}
-
-.filter__fieldset-contacts label:nth-child(2) {
-  @media (min-width: $desktop) {
-    grid-area: 2/1/3/2;
-    margin: 0 0 0 110px;
-  }
-}
-
-.filter__fieldset-contacts label:nth-child(3) {
-  @media (min-width: $desktop) {
-    grid-area: 2/2/3/3;
-    margin: 0 110px 0 0;
   }
 }
 
@@ -331,6 +321,17 @@
   }
 }
 
+.filter__list-contacts {
+  @include reset-list;
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 80px;
+    padding: 0 110px;
+  }
+}
+
 .filter__contacts {
   position: relative;
   display: grid;
@@ -340,6 +341,10 @@
 
   @media (min-width: $tablet) {
     margin: 0 70px 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
   }
 }
 
@@ -413,7 +418,7 @@
 
   @media (min-width: $tablet) {
     grid-area: 4/1/5/3;
-    margin: 0 0 6px;
+    margin: 0 0 66px;
   }
 
   @media (min-width: $desktop) {
@@ -458,6 +463,7 @@
 
   @media (min-width: $tablet) {
     width: calc(100% - 140px);
+    height: 175px;
     margin: 0 70px;
     padding: 11px 20px;
     font-size: 20px;
@@ -466,8 +472,6 @@
 
   @media (min-width: $desktop) {
     width: calc(100% - 220px);
-    height: 175px;
-    min-height: 175px;
     margin: 0 110px;
     padding: 9px 20px;
   }
@@ -560,8 +564,13 @@
   border: 1px solid var(--border-bright);
 }
 
-.filter__checkbox-invis[type="checkbox"]:checked + .filter__checkbox-backup path {
+.filter__checkbox-invis:checked + .filter__checkbox-backup path {
   fill: var(--color-bright);
+}
+
+.filter__checkbox-invis:disabled + .filter__checkbox-backup,
+.filter__checkbox-invis:disabled ~ .filter__checkbox-text {
+  opacity: 0.3;
 }
 
 .filter__checkbox-text {

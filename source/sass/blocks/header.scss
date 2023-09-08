@@ -51,7 +51,7 @@
 }
 
 .header__navigation--nojs {
-  display: static;
+  display: contents;
 
   @media (min-width: $tablet) {
     display: flex;
@@ -184,4 +184,9 @@
 
 .header__navigation--opened + .header__toggle::after {
   transform: rotate(-45deg);
+}
+
+.header__navigation--nojs + .header__toggle::before,
+.header__navigation--nojs + .header__toggle::after {
+  display: none;
 }
