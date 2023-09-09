@@ -42,11 +42,11 @@
     @media (min-width: $tablet) {
       width: 60px;
       height: 2px;
-      margin: 78px auto 76px;
+      margin: 78px auto 80px;
     }
 
     @media (min-width: $desktop) {
-      margin: 78px auto 76px;
+      margin: 78px auto 70px;
     }
   }
 
@@ -151,13 +151,12 @@
   grid-template-columns: 1fr 1fr;
 
   @media (min-width: $tablet) {
-    margin: 0 0 38px;
-    gap: 12px 0;
+    margin: 0 0 32px;
+    gap: 8px 0;
   }
 
   @media (min-width: $desktop) {
-    margin: 0 0 43px;
-    gap: 13px 0;
+    margin: 0 0 35px;
   }
 }
 
@@ -170,41 +169,28 @@
   text-transform: uppercase;
 }
 
-.card__property {
-  position: relative;
+.card__property,
+.card__value {
+  margin: 0;
   font-family: $minor;
   font-size: 12px;
   line-height: 16px;
   color: var(--color-casual);
 
   @media (min-width: $tablet) {
+    padding: 0 0 4px;
     font-size: 16px;
     line-height: normal;
+    border-bottom: 1px solid var(--border-mega-light);
   }
 
-  &::before {
-    @media (min-width: $tablet) {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      background-color: transparent;
-      box-shadow: 0 27px 0 0 var(--border-mega-light);
-    }
+  @media (min-width: $desktop) {
+    padding: 0 0 5px;
   }
 }
 
 .card__value {
-  margin-left: auto;
-  font-family: $minor;
-  font-size: 12px;
-  line-height: 16px;
-  color: var(--color-casual);
-
-  @media (min-width: $tablet) {
-    font-size: 16px;
-    line-height: normal;
-  }
+  text-align: right;
 }
 
 .card__edition {
